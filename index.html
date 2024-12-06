@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Németh Gábor fullstack webfejlesztő oldala">
+    <meta property="og:description" content="Németh Gábor fullstack webfejlesztő oldal">
+    <meta property="og:image" content="https://www.ngaborwebdev.hu/kepek/webdev.jpg">
+    <meta property="og:url" content="https://www.ngaborwebdev.hu/">
+    <meta property="og:type" content="website">
+    <title>Németh Gábor Fullstack Webdeveloper</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "P8dNoJEFw9YPe38iq",
+            });
+        })();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <header class="active">
+        <a href="" class="logo"><img src="images/G-logos_white2.png" alt="Logo"></a>
+
+        <i class='bx bx-menu' id="menu-icon"></i>
+
+        <nav>
+            <a href="#" class="active" id="navHome">Főoldal</a>
+            <a href="#" id="navService">Szolgáltatások</a>
+            <a href="#" id="navResume">Magamról</a>
+            <a href="#" id="navPortfolio">Portfolió</a>
+            <a href="#" id="navContact">Kapcsolat</a>
+            <select class="lang-select">
+                <option value="hu">HU</option>
+                <option value="en">EN</option>
+            </select>
+        </nav>
+
+    </header>
+
+    <div class="bars-box active">
+        <div class="bar" style="--i:6"></div>
+        <div class="bar" style="--i:5"></div>
+        <div class="bar" style="--i:4"></div>
+        <div class="bar" style="--i:3"></div>
+        <div class="bar" style="--i:2"></div>
+        <div class="bar" style="--i:1"></div>
+    </div>
+
+    <!--Home section-->
+    <section class="home active">
+        <div class="home-detail">
+            <h1 id="homeH1">Németh Gábor</h1>
+            <h2 id="homeH2">Junior
+                <span style="--i:4;" data-text="Webfejlesztő">Webfejlesztő</span>
+                <span style="--i:3;" data-text="Front-end fejlesztő">Front-end fejlesztő</span>
+                <span style="--i:2;" data-text="Backend fejlesztő">Backend fejlesztő</span>
+                <span style="--i:1;" data-text="Fullstack fejlesztő">Fullstack fejlesztő</span>
+            </h2>
+            <p id="homeP1">Webfejlesztői munkát keresek.</p>
+            <p id="homeP2">Gyorsan és lelkesen tanulok, szeretnék elhelyezkedni a szakmában.</p>
+            <p id="homeP3">Nyitott vagyok újabb és újabb technológiák elsajátítására a hatékonyabb munkavégzés
+                érdekében.</p>
+
+            <div class="btn-sci">
+                <a href="assets/Németh_Gábor_CV_HU.pdf" download class="btn" id="homeCV">Magyar nyelvű CV letöltése</a>
+                <div class="sci">
+                    <a href="https://github.com/ngabor90/" target="_blank"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.linkedin.com/in/g%C3%A1bor-n%C3%A9meth-3341932a7/" target="_blank"><i
+                            class='bx bxl-linkedin'></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61555245188181" target="_blank"><i
+                            class='bx bxl-facebook'></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="home-img">
+            <div class="img-box">
+                <div class="img-item">
+                    <img src="images/home.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Services section-->
+    <section class="services">
+        <h2 id="serviceH2" class="heading">A <span>Szolgáltatások</span></h2>
+        <div class="services-container">
+            <div class="services-box">
+                <div class="icon">
+                    <i class='bx bx-code-alt'></i>
+                    <a href="#"><i class='bx bx-arrow-back'></i></a>
+                </div>
+                <h3 id="service1H3">Front-end fejlesztés</h3>
+                <p id="service1p1">A front-end fejlesztés során modern, reszponzív és esztétikusan megtervezett
+                    felületeket hozok létre, amelyek nemcsak jól mutatnak, hanem kiváló felhasználói élményt is
+                    biztosítanak. Fontosnak tartom, hogy az általam fejlesztett alkalmazások minden eszközön - legyen az
+                    telefon, tablet vagy asztali számítógép - gördülékenyen és gyorsan működjenek.</p>
+                <br>
+                <p id="service1p2">Az alábbi technológiákat használom: HTML5, CSS, JavaScript, TypeScript, Angular</p>
+
+            </div>
+
+            <div class="services-box">
+                <div class="icon">
+                    <i class='bx bxs-paint-roll'></i>
+                    <a href="#"><i class='bx bx-arrow-back'></i></a>
+                </div>
+                <h3 id="service2H3">Backend fejlesztés</h3>
+                <p id="service2p1">A hatékony webes alkalmazások szívét a stabil és megbízható szerveroldali rendszer
+                    alkotja. A back-end fejlesztés során az adatkezelési és szerveroldali logikára fókuszálok, így az
+                    alkalmazások zökkenőmentesen kommunikálnak a front-end réteggel.</p>
+                <br>
+                <p id="service2p2">A következő technológiákkal dolgozom: PHP és MySQL adatbáziskezelő</p>
+            </div>
+
+            <div class="services-box">
+                <div class="icon">
+                    <i class='bx bx-palette'></i>
+                    <a href="#"><i class='bx bx-arrow-back'></i></a>
+                </div>
+                <h3 id="service3H3">Fullstack fejlesztés</h3>
+                <p id="service3p1">A front-end és back-end fejlesztés kombinációjával teljes körű webes megoldásokat
+                    kínálok. A Fullstack fejlesztés során nemcsak a felhasználói felület megtervezésére és fejlesztésére
+                    fókuszálok, hanem a háttérrendszer kidolgozására is, hogy az alkalmazás minden szempontból
+                    tökéletesen működjön.</p>
+                <br>
+                <p id="service3p2">A két terület összefonódásának köszönhetően olyan rendszereket hozok létre,
+                    amelyek zökkenőmentesen működnek mind a felhasználói, mind az adminisztrációs oldalon.
+                    Könnyen bővíthetők és testreszabhatók az ügyféligények szerint.
+                    Biztosítják az adatok biztonságos kezelését és tárolását.</p>
+            </div>
+        </div>
+    </section>
+
+    <!--Resume section-->
+    <section class="resume">
+        <div class="resume-container">
+            <div class="resume-box">
+                <h2 id="resumeH2">Miért engem válassz?</h2>
+                <p id="resumeP">Több mint egy évtizedes irodai munkatapasztalattal és friss, piacképes webfejlesztői
+                    tudással rendelkezem. Szenvedéllyel és elkötelezettséggel dolgozom, mindig a minőséget és az ügyfél
+                    elégedettségét tartom szem előtt.</p>
+                <button id="resumeButton1" class="resume-btn active">Munkahelyeim</button>
+                <button id="resumeButton2" class="resume-btn">Képzések</button>
+                <button id="resumeButton3" class="resume-btn">Technológiák</button>
+                <button id="resumeButton4" class="resume-btn">Rólam</button>
+            </div>
+
+            <div class="resume-box">
+                <div class="resume-detail experience active">
+                    <h2 id="resumeExperienceH2" class="heading"> <span>Munkahelyeim</span></h2>
+                    <p id="resumeExperienceP" class="desc">Az elmúlt 10 évben irodai környezetben dolgoztam, ahol
+                        precizitás, hatékony időgazdálkodás és analitikus gondolkodás vált alapvető készségeimmé. Ez az
+                        időszak nemcsak a munkafegyelmet és a csapatmunkát erősítette bennem, hanem felkészített a
+                        webfejlesztői munkák kihívásaira is. Most az irodai tapasztalatokat ötvözöm a technikai
+                        tudással, hogy értékes hozzájárulást nyújtsak új csapatomban.</p>
+                    <div class="resume-list">
+                        <div class="resume-item">
+                            <p id="resumeExperienceItem1P1" class="year">2024. február - Jelenleg</p>
+                            <h3 id="resumeExperienceItem1H3">Webfejlesztő</h3>
+                            <p id="resumeExperienceItem1P2" class="company">Szabadúszó</p>
+                            <p id="resumeExperienceItem1P3">Webfejlesztés, front-end, backend fejlesztés</p>
+                        </div>
+                        <div class="resume-item">
+                            <p id="resumeExperienceItem2P1" class="year">2018 augusztus - Jelenleg</p>
+                            <h3 id="resumeExperienceItem2H3">Iratkezelő</h3>
+                            <p id="resumeExperienceItem2P2" class="company">Közbeszerzés és Ellátási Főigazgatóság</p>
+                            <p id="resumeExperienceItem2P3">Iratkezelés, irattárolás, adminisztráció</p>
+                        </div>
+                        <div class="resume-item">
+                            <p id="resumeExperienceItem3P1" class="year">2014 május - 2018 július</p>
+                            <h3 id="resumeExperienceItem3H3">Irattáros</h3>
+                            <p id="resumeExperienceItem3P2" class="company">Iron Mountain Magyarország Kft.</p>
+                            <p id="resumeExperienceItem3P3">Irattárolás, adminisztráció</p>
+                        </div>
+                        <div class="resume-item">
+                            <p id="resumeExperienceItem4P1" class="year">2011 júlis - 2014 április</p>
+                            <h3 id="resumeExperienceItem4H3">Webshop adminisztrátor</h3>
+                            <p id="resumeExperienceItem4P2" class="company">Hangszerker Kft.</p>
+                            <p id="resumeExperienceItem4P3">Webshop kezelés</p>
+                        </div>
+                        <div class="resume-item">
+                            <p id="resumeExperienceItem5P1" class="year">2011 május - 2011 július</p>
+                            <h3 id="resumeExperienceItem5H3">Irodai munkatárs</h3>
+                            <p id="resumeExperienceItem5P2" class="company">Educatio Kft.</p>
+                            <p id="resumeExperienceItem5P3">Adminisztráció</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resume-detail education">
+                    <h2 id="resumeEducationH2" class="heading"> <span>Képzéseim</span></h2>
+                    <p id="resumeEducationP" class="desc">A Ruander Oktatási Központban kezdtem meg webfejlesztői
+                        tanulmányaimat, ahol
+                        Frontend Fejlesztést tanultam és sikeres vizsgát tettem. Ennek eredményeként államilag elismert
+                        Junior Frontend OKJ bizonyítványt szereztem. Ezt követően mélyebb ismereteket szereztem a PHP és
+                        SQL területén, és elvégeztem a Fullstack Webfejlesztő képzést. A folyamatos önképzés révén
+                        bővítem ismereteimet a legmodernebb technológiákról.</p>
+                    <div class="resume-list">
+                        <div class="resume-item">
+                            <p id="resumeEducationItem1P1" class="year">2024 február - 2024 július</p>
+                            <h3 id="resumeEducationItem1H3">Webfejlesztő</h3>
+                            <p id="resumeEducationItem1P2" class="company">Ruander Oktatási Központ</p>
+                            <p>PHP, MySQL</p>
+                        </div>
+                        <div class="resume-item">
+                            <p id="resumeEducationItem2P1" class="year">2023 február - 2024 február</p>
+                            <h3 id="resumeEducationItem2H3">Front-end fejlesztő</h3>
+                            <p id="resumeEducationItem2P2" class="company">Ruander Oktatási Központ</p>
+                            <p>HTML5, CSS3, JavaScript, TypeScript, Angular, NodeJS, Github</p>
+                        </div>
+                        <div class="resume-item">
+                            <p id="resumeEducationItem3P1" class="year">2004 szeptember - 2008 június</p>
+                            <h3 id="resumeEducationItem3H3">Értességi</h3>
+                            <p id="resumeEducationItem3P2" class="company">ELTE Gyakorló Középiskola</p>
+                            <p id="resumeEducationItem3P3">Informatikai érettségi</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resume-detail skills">
+                    <h2 id="resumeSkillsH2" class="heading"> <span>Techológiák</span></h2>
+                    <p id="resumeSkillsP" class="desc">Az alábbi technológiákban rendelkezem tapasztalattal, de nagyon
+                        szívesen tanulok új
+                        technológiákat.</p>
+                    <div class="resume-list">
+                        <div class="resume-item">
+                            <i class='bx bxl-html5'></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="resume-item">
+                            <i class='bx bxl-css3'></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="resume-item">
+                            <i class='bx bxl-javascript'></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="resume-item">
+                            <i class='bx bxl-typescript'></i>
+                            <span>TypeScript</span>
+                        </div>
+                        <div class="resume-item">
+                            <i class='bx bxl-bootstrap'></i>
+                            <span>Bootstrap</span>
+                        </div>
+                        <div class="resume-item">
+                            <i class='bx bxl-angular'></i>
+                            <span>Angular</span>
+                        </div>
+                        <div class="resume-item">
+                            <i class='bx bxl-nodejs'></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="resume-item">
+                            <i class='bx bxl-mongodb'></i>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="resume-item">
+                            <i class='bx bxl-php'></i>
+                            <span>PHP</span>
+                        </div>
+                        <div class="resume-item">
+                            <i class='bx bx-data'></i>
+                            <span>MySQL</span>
+                        </div>
+                        <div class="resume-item">
+                            <i class='bx bxl-github'></i>
+                            <span>Github</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resume-detail about">
+                    <h2 id="resumeAboutH2" class="heading"> <span>Magamról</span></h2>
+                    <p id="resumeAboutP" class="desc">Budapesten élek, ahol a kreativitás és a fejlődés iránti vágy
+                        vezérel a
+                        mindennapokban. Gyorsan és lelkesen tanulok, célom, hogy teljes értékű tagja legyek egy profi
+                        fejlesztőcsapatnak. Rugalmasságom és analitikus gondolkodásom segít, hogy komplex problémákra is
+                        hatékony megoldásokat találjak. Emellett nyitott vagyok új technológiák megismerésére, hiszen
+                        hiszek abban, hogy az IT-világ folyamatosan fejlődik, és lépést kell tartani vele.</p>
+                    <div class="resume-list">
+                        <div class="resume-item">
+                            <p id="resumeAboutItemP1">Név: <span>Németh Gábor</span></p>
+                        </div>
+                        <div class="resume-item">
+                            <p id="resumeAboutItemP2">Nem: <span>Férfi</span></p>
+                        </div>
+                        <div class="resume-item">
+                            <p id="resumeAboutItemP3">Kor: <span>34</span></p>
+                        </div>
+                        <div class="resume-item">
+                            <p id="resumeAboutItemP4">Város: <span>Budapest</span></p>
+                        </div>
+                        <div class="resume-item">
+                            <p id="resumeAboutItemP5">Nemzetiség: <span>Magyar</span></p>
+                        </div>
+                        <div class="resume-item">
+                            <p id="resumeAboutItemP6">Teljes munkatapasztalat: <span>10+ év</span></p>
+                        </div>
+                        <div class="resume-item">
+                            <p id="resumeAboutItemP7">Webfejlesztés: <span>Junior</span></p>
+                        </div>
+                        <div class="resume-item">
+                            <p id="resumeAboutItemP8">Teljes Munkaidő: <span>Igen</span></p>
+                        </div>
+                        <div class="resume-item">
+                            <p id="resumeAboutItemP9">Szabadúszó: <span>Igen</span></p>
+                        </div>
+                        <div class="resume-item">
+                            <p id="resumeAboutItemP10">Nyelvek: <span>Magyar, Angol</span></p>
+                        </div>
+                        <div class="resume-item">
+                            <p>Telefonszám: <a href="tel:+36307385115"><span>06-30-738-5115</span></a></p>
+                        </div>
+                        <div class="resume-item">
+                            <p>Email: <a href="mailto:n.gabor90@gmail.com"><span>n.gabor90@gmail.com</span></a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Portfolio section-->
+    <section class="portfolio">
+        <h2 id="portfolioH2" class="heading">Legutóbbi <span>Projektek</span></h2>
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <div class="portfolio-detail active">
+                    <p class="numb">01</p>
+                    <h3 id="portfolio1">Gitár API</h3>
+                    <p id="portfolioP1">Ez egy fullstack weboldal ami gitárokkal foglalkozik, API hívás történik, a
+                        backend része MVC
+                        alapú PHP MySQL adatbázissal, a frontend része HTML és Javascript. Bejelentkezés után van
+                        lehetőség a gitárok módosítására, törlésére illetve új termék felvitelre.
+                    </p>
+                    <div class="tech">
+                        <p>PHP, SQL, API, HTML5, CSS3, JavaScript, Bootstrap</p>
+                    </div>
+                    <div class="live-github">
+                        <a href="https://guitarapi.eu/client/index.html" target="_blank"><i
+                                class='bx bx-arrow-back'></i><span class="goToWebsite">Irány a honlapra</span></a>
+                        <a href="https://github.com/ngabor90/PHP_Guitar_API" target="_blank"><i
+                                class='bx bxl-github'></i><span class="goToGithub">Irány a kódhoz</span></a>
+                    </div>
+                </div>
+                <div class="portfolio-detail">
+                    <p class="numb">02</p>
+                    <h3 id="portfolio2">PHP Szivarpontozó oldal</h3>
+                    <p id="portfolioP2">Ez egy Szivar pontozó vélemény oldal, ami PHP-ban lett megírva, CSV adatbázist
+                        használ.</p>
+                    <div class="tech">
+                        <p>PHP, HTML5, CSS3</p>
+                    </div>
+                    <div class="live-github">
+                        <a href="http://szivarpontozo.infinityfreeapp.com/"><i class='bx bx-arrow-back'></i><span
+                                class="goToWebsite">Irány
+                                a honlapra</span></a>
+                        <a href="https://github.com/ngabor90/SzivarPontozoPHP"><i class='bx bxl-github'></i><span
+                                class="goToGithub">Irány
+                                a kódhoz</span></a>
+                    </div>
+                </div>
+                <div class="portfolio-detail">
+                    <p class="numb">03</p>
+                    <h3 id="portfolio3">Lash By Judie - Szempilla stylist oldal</h3>
+                    <p id="portfolioP3">A legfrissebb Front-end-es munkám, hosszú CSS stílusokkal, Bootstrap
+                        keretrendszerrel. Büki Judit szempilla stylist oldala.</p>
+                    <div class="tech">
+                        <p>HTML5, CSS3, Bootstrap</p>
+                    </div>
+                    <div class="live-github">
+                        <a href="https://lashbyjudie.hu/" target="_blank"><i class='bx bx-arrow-back'></i><span
+                                class="goToWebsite">Irány
+                                a honlapra</span></a>
+                        <a href="https://github.com/ngabor90/LashByJudie" target="_blank"><i
+                                class='bx bxl-github'></i><span class="goToGithub">Irány
+                                a kódhoz</span></a>
+                    </div>
+                </div>
+                <div class="portfolio-detail">
+                    <p class="numb">04</p>
+                    <h3 id="portfolio4">PHP MVC alapú szervíz oldal</h3>
+                    <p id="portfolioP4">Ez egy PHP-ban megírt MySQL adatbázissal ellátott fullstack weboldal! A
+                        Szervizelt termékek menüpont alatt lehet megnézni a képzeletbeli szervíz oldalán lévő szervizelt
+                        termékek adatait és állapotukat.</p>
+                    <div class="tech">
+                        <p>PHP, SQL, HTML5, Bootstrap</p>
+                    </div>
+                    <div class="live-github">
+                        <a href="https://phpservice.hu/" target="_blank"><i class='bx bx-arrow-back'></i><span
+                                class="goToWebsite">Irány
+                                a honlapra</span></a>
+                        <a href="https://github.com/ngabor90/SzervizPHP" target="_blank"><i
+                                class='bx bxl-github'></i><span class="goToGithub">Irány
+                                a kódhoz</span></a>
+                    </div>
+                </div>
+                <div class="portfolio-detail">
+                    <p class="numb">05</p>
+                    <h3 id="portfolio5">PHP Apróhirdetések oldal</h3>
+                    <p id="portfolioP5">Ez egy PHP-ban megírt MySQL adatbázissal ellátott apróhirdetések oldal, ahol meg
+                        lehet nézni a hirdetéseket regisztráció nélkül. Regisztráció és bejelentkezés után fel lehet
+                        rakni új hirdetést, illetve tudunk adatokat módosítani.</p>
+                    <div class="tech">
+                        <p>PHP, SQL, HTML5, Bootstrap</p>
+                    </div>
+                    <div class="live-github">
+                        <a href="https://phpaprohirdetesek.eu/index.php" target="_blank"><i
+                                class='bx bx-arrow-back'></i><span class="goToWebsite">Irány
+                                a honlapra</span></a>
+                        <a href="https://github.com/ngabor90/HirdetesekPHP" target="_blank"><i
+                                class='bx bxl-github'></i><span class="goToGithub">Irány
+                                a kódhoz</span></a>
+                    </div>
+                </div>
+                <div class="portfolio-detail">
+                    <p class="numb">06</p>
+                    <h3 id="portfolio6">Angular Hangszerbolt Oldal</h3>
+                    <p id="portfolioP6">Ez egy Angular projekt ami bemutat egy hangszerbolt minta oldalt Netlify App-ra
+                        feltöltve.</p>
+                    <div class="tech">
+                        <p>Angular, Bootstrap</p>
+                    </div>
+                    <div class="live-github">
+                        <a href="https://angularhangszer.netlify.app" target="_blank"><i
+                                class='bx bx-arrow-back'></i><span class="goToWebsite">Irány
+                                a honlapra</span></a>
+                        <a href="https://github.com/ngabor90/AngularHangszerbolt" target="_blank"><i
+                                class='bx bxl-github'></i><span class="goToGithub">Irány
+                                a kódhoz</span></a>
+                    </div>
+                </div>
+                <div class="portfolio-detail">
+                    <p class="numb">07</p>
+                    <h3 id="portfolio7">Az Outlaw zenekar honlapja</h3>
+                    <p id="portfolioP7">Ez az Outlaw blues-rock zenekarom honlapja.</p>
+                    <div class="tech">
+                        <p>HTML5, CSS3</p>
+                    </div>
+                    <div class="live-github">
+                        <a href="https://outlaw.hu" target="_blank"><i class='bx bx-arrow-back'></i><span
+                                class="goToWebsite">Irány
+                                a honlapra</span></a>
+                        <a href="https://github.com/ngabor90/OutlawBand" target="_blank"><i
+                                class='bx bxl-github'></i><span class="goToGithub">Irány
+                                a kódhoz</span></a>
+                    </div>
+                </div>
+                <div class="portfolio-detail">
+                    <p class="numb">08</p>
+                    <h3 id="portfolio8">Rick & Morty API</h3>
+                    <p id="portfolioP8">Ez a Rick & Morty API oldalról történő XML API hívás.</p>
+                    <div class="tech">
+                        <p>HTML5, JavaScript</p>
+                    </div>
+                    <div class="live-github">
+                        <a href="https://rickandmortyapinemethgabor.netlify.app/" target="_blank"><i
+                                class='bx bx-arrow-back'></i><span class="goToWebsite">Irány
+                                a honlapra</span></a>
+                        <a href="https://github.com/ngabor90/rickandmortyApi" target="_blank"><i
+                                class='bx bxl-github'></i><span class="goToGithub">Irány
+                                a kódhoz</span></a>
+                    </div>
+                </div>
+                <div class="portfolio-detail">
+                    <p class="numb">09</p>
+                    <h3 id="portfolio9">TypeScript Szivarpontozó oldal</h3>
+                    <p id="portfolioP9">Ez egy szivar pontozó oldal, ahol feltöltheted szivarjaid értékeléseit, Netlify
+                        App-ra feltöltve.
+                    </p>
+                    <div class="tech">
+                        <p>HTML5, CSS3, TypeScript</p>
+                    </div>
+                    <div class="live-github">
+                        <a href="https://cigarscore.netlify.app/" target="_blank"><i class='bx bx-arrow-back'></i><span
+                                class="goToWebsite">Irány
+                                a honlapra</span></a>
+                        <a href="https://github.com/ngabor90/cigarscore" target="_blank"><i
+                                class='bx bxl-github'></i><span class="goToGithub">Irány
+                                a kódhoz</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <div class="portfolio-carousel">
+                    <div class="img-slide">
+                        <div class="img-item">
+                            <a href="https://guitarapi.eu/client/index.html" target="_blank"><img
+                                    src="images/guitar_oldal.jpg" alt="GuitarApi"></a>
+                        </div>
+                        <div class="img-item">
+                            <a href="http://szivarpontozo.infinityfreeapp.com/" target="_blank"><img
+                                    src="images/phpszivar.jpg" alt="PHPSzivar"></a>
+                        </div>
+                        <div class="img-item">
+                            <a href="https://lashbyjudie.hu/" target="_blank"><img src="images/lashbyjudie.jpg"
+                                    alt="LashByJudie"></a>
+                        </div>
+                        <div class="img-item">
+                            <a href="https://phpservice.hu/" target="_blank"><img src="images/service.jpg"
+                                    alt="PHPService"></a>
+                        </div>
+                        <div class="img-item">
+                            <a href="https://phpaprohirdetesek.eu/index.php" target="_blank"><img
+                                    src="images/aprohirdetesek_oldal.jpg" alt="Aprohirdetesek"></a>
+                        </div>
+                        <div class="img-item">
+                            <a href="https://angularhangszer.netlify.app/" target="_blank"><img
+                                    src="images/angular_oldal.jpg" alt="AngularHangszerbolt"></a>
+                        </div>
+                        <div class="img-item">
+                            <a href="https://outlaw.hu/" target="_blank"><img src="images/outlaw_oldal.jpg"
+                                    alt="OutlawBand"></a>
+                        </div>
+                        <div class="img-item">
+                            <a href="https://rickandmortyapinemethgabor.netlify.app/" target="_blank"><img
+                                    src="images/api_oldal.jpg" alt="ApiOldal"></a>
+                        </div>
+                        <div class="img-item">
+                            <a href="https://cigarscore.netlify.app/" target="_blank"><img src="images/cigar_oldal.jpg"
+                                    alt="CigarScore"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="navigation">
+                    <button class="arrow-left disabled"><i class='bx bxs-chevron-left'></i></button>
+                    <button class="arrow-right"><i class='bx bxs-chevron-right'></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Contact section-->
+    <section class="contact">
+        <div class="contact-container">
+            <div class="contact-box">
+                <h2 id="contactH2">Dolgozzunk együtt</h2>
+                <p id="contactP" class="desc">Köszönöm, hogy időt szántál portfólióm megtekintésére. Szenvedélyem a
+                    webfejlesztés, és célom, hogy egy professzionális csapat tagjaként kamatoztathassam tudásom,
+                    miközben folyamatosan fejlődhetek. Ha nyitott vagy arra, hogy együtt dolgozzunk, örömmel venném, ha
+                    felvennéd velem a kapcsolatot!
+                </p>
+                <div class="contact-detail">
+                    <a href="tel:+36307385115"><i class="bx bxs-phone"></i></a>
+                    <div class="detail">
+                        <p id="contactPhone">Telefon</p>
+                        <p><a class="detail-phone" href="tel:+36307385115">+36 30 738 5115</a></p>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <a href="mailto:n.gabor90@gmail.com"><i class="bx bxs-envelope"></i></a>
+                    <div class="detail">
+                        <p>Email</p>
+                        <p><a class="detail-email" href="mailto:n.gabor90@gmail.com">n.gabor90@gmail.com</a></p>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <a href="https://maps.app.goo.gl/iiHDSQ5GLRzS1Zqv6" target="_blank"><i class="bx bxs-map"></i></a>
+                    <div class="detail">
+                        <p id="contactAdress">Cím</p>
+                        <p>1041 Budapest, Hungary</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-box">
+                <form id="contact-form">
+                    <h2 id="contactMe" class="heading">Írj <span>nekem!</span></h2>
+                    <div class="field-box">
+                        <input id="form_name" name="form_name" class="input1Placeholder" type="text"
+                            placeholder="Teljes név" required>
+                        <input id="input-email" name="input-email" class="input2Placeholder" type="email"
+                            placeholder="Email" required>
+                        <input id="input-phone" name="input-phone" class="input3Placeholder" type="text"
+                            placeholder="Telefonszám" required>
+                        <input id="input-subject" name="input-subject" class="input4Placeholder" type="text"
+                            placeholder="Tárgy" required>
+                        <textarea class="input5Placeholder" name="input-text" id="input-text" placeholder="Az üzeneted"
+                            required></textarea>
+                    </div>
+                    <button id="inputButton" type="submit" class="btn">Küldés</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
