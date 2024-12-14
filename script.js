@@ -204,7 +204,7 @@ const translations = {
         resumeEducationItem2P2: "Ruander Oktatási Központ",
 
         resumeEducationItem3P1: "2004 szeptember - 2008 június",
-        resumeEducationItem3H2: "Értességi",
+        resumeEducationItem3H3: "Értességi",
         resumeEducationItem3P2: "ELTE Gyakorló Középiskola",
         resumeEducationItem3P3: "Informatikai érettségi",
 
@@ -233,7 +233,7 @@ const translations = {
         resumeAboutItemP8: "Teljes Munkaidő: ",
         resumeAboutItemP8Span: "Igen",
         resumeAboutItemP9: "Szabadúszó: ",
-        resumeAboutItemP9: "Igen",
+        resumeAboutItemP9Span: "Igen",
         resumeAboutItemP10: "Nyelvek: ",
         resumeAboutItemP10Span: "Magyar, Angol",
 
@@ -264,6 +264,7 @@ const translations = {
         contactP: "Köszönöm, hogy időt szántál portfólióm megtekintésére. Szenvedélyem a webfejlesztés, és célom, hogy egy professzionális csapat tagjaként kamatoztathassam tudásom, miközben folyamatosan fejlődhetek. Ha nyitott vagy arra, hogy együtt dolgozzunk, örömmel venném, ha felvennéd velem a kapcsolatot!",
         contactPhone: "Telefon",
         contactAdress: "Cím",
+        contactAdress2: "1041 Budapest, Magyarország",
         contactMe: "Írj ",
         contactMeSpan: "nekem!",
         input1Placeholder: "Teljes név",
@@ -420,6 +421,7 @@ const translations = {
         contactP: "Thank you for taking the time to review my portfolio. I am passionate about web development, and my goal is to contribute my skills as a member of a professional team while continuously growing and improving. If you are open to working together, I would be delighted to hear from you!",
         contactPhone: "Phone",
         contactAdress: "Adress",
+        contactAdress2: "1041 Budapest, Hungary",
         contactMe: "Contact ",
         contactMeSpan: "Me!",
         input1Placeholder: "Full name",
@@ -438,7 +440,6 @@ const translations = {
         sendingEmail: "Sending..."
     }
 }
-
 
 let navHome = document.getElementById('navHome');
 let navService = document.getElementById('navService');
@@ -473,7 +474,6 @@ let resumeButton4 = document.getElementById('resumeButton4');
 
 let resumeExperienceH2 = document.getElementById('resumeExperienceH2');
 let resumeExperienceP = document.getElementById('resumeExperienceP');
-
 
 let resumeExperienceItem1P1 = document.getElementById('resumeExperienceItem1P1');
 let resumeExperienceItem1H3 = document.getElementById('resumeExperienceItem1H3');
@@ -561,37 +561,40 @@ let contactH2 = document.getElementById("contactH2");
 let contactP = document.getElementById("contactP");
 let contactPhone = document.getElementById("contactPhone");
 let contactAdress = document.getElementById("contactAdress");
+let contactAdress2 = document.getElementById("contactAdress2");
 let contactMe = document.getElementById("contactMe");
 let inputButton = document.getElementById('inputButton');
 
-const languageSelect = document.querySelector('select');
-
-languageSelect.addEventListener('change', (event) => {
-    setLanguage(event.target.value);
-
-    localStorage.setItem('selectedLanguage', event.target.value);
-
-    if (navbar.classList.contains('active')) {
-        menuIcon.classList.remove('bx-x');
-        navbar.classList.remove('active');
-    }
-});
+const languageSelect = document.getElementById('languageSelect');
 
 document.addEventListener('DOMContentLoaded', () => {
     const savedLanguage = localStorage.getItem('selectedLanguage');
 
     if (savedLanguage) {
-        languageSelect.value = savedLanguage; // Választott nyelv beállítása
-        setLanguage(savedLanguage); // A megfelelő nyelvi fordítás alkalmazása
+        languageSelect.value = savedLanguage;
+        setLanguage(savedLanguage);
     } else {
-        // Ha nincs mentett nyelv, alapértelmezett nyelv lehet, például magyar
         languageSelect.value = 'hu';
         setLanguage('hu');
     }
+
+});
+
+languageSelect.addEventListener('change', (event) => {
+    const newLanguage = event.target.value;
+    setLanguage(newLanguage);
+    localStorage.setItem('selectedLanguage', newLanguage);
+
+    if (navbar.classList.contains('active')) {
+        menuIcon.classList.remove('bx-x');
+        navbar.classList.remove('active');
+    }
+    
 });
 
 const setLanguage = (language) => {
     const selectedTranslations = translations[language];
+    setAnimatedText(selectedTranslations);
 
     // Navigációs elemek szövegének beállítása
     navHome.innerText = selectedTranslations.navHome;
@@ -607,27 +610,7 @@ const setLanguage = (language) => {
     homeP3.innerText = selectedTranslations.homeP3;
     homeCV.innerText = selectedTranslations.homeCV;
 
-
-
-    // CV link frissítése
-    if (language === "hu") {
-        homeCV.href = "assets/Németh_Gábor_CV_HU.pdf";
-    } else if (language === "en") {
-        homeCV.href = "assets/Nemeth_Gabor_CV_EN.pdf";
-    }
-
-    // Animált szövegrészek beállítása
-    const spanElements = homeH2.querySelectorAll('span');
-    selectedTranslations.spans.forEach((spanData, idx) => {
-        if (spanElements[idx]) {
-            spanElements[idx].setAttribute('data-text', spanData.text);
-            spanElements[idx].innerText = spanData.text;
-            spanElements[idx].style.setProperty('--i', spanData.styleIndex);
-        }
-    });
-
     // Szolgáltatások szövegek beállítása
-
 
     const spanService = serviceH2.querySelector('span');
     serviceH2.firstChild.textContent = selectedTranslations.serviceH2.replace(' ' + selectedTranslations.serviceH2Span, '');
@@ -644,7 +627,6 @@ const setLanguage = (language) => {
     service3H3.innerText = selectedTranslations.service3H3;
     service3p1.innerText = selectedTranslations.service3p1;
     service3p2.innerText = selectedTranslations.service3p2;
-
 
     resumeH2.innerText = selectedTranslations.resumeH2;
     resumeP.innerText = selectedTranslations.resumeP;
@@ -688,7 +670,7 @@ const setLanguage = (language) => {
 
     resumeEducationItem2P1.innerText = selectedTranslations.resumeEducationItem2P1;
     resumeEducationItem2H3.innerText = selectedTranslations.resumeEducationItem2H3;
-    resumeEducationItem2P2.innerText = selectedTranslations.resumeEducationItem2P1;
+    resumeEducationItem2P2.innerText = selectedTranslations.resumeEducationItem2P2;
 
     resumeEducationItem3P1.innerText = selectedTranslations.resumeEducationItem3P1;
     resumeEducationItem3H3.innerText = selectedTranslations.resumeEducationItem3H3;
@@ -759,7 +741,6 @@ const setLanguage = (language) => {
         }
     })
 
-
     const portfolioH2 = document.getElementById("portfolioH2");
     const spanportfolioH2 = portfolioH2.querySelector('span');
     portfolioH2.firstChild.textContent = selectedTranslations.portfolioH2;
@@ -787,11 +768,9 @@ const setLanguage = (language) => {
     portfolioP8.innerText = selectedTranslations.portfolioP8;
     portfolioP9.innerText = selectedTranslations.portfolioP9;
 
-
     goToWebsiteTooltips.forEach(tooltip => {
         tooltip.innerText = selectedTranslations.goToWebsite;
     });
-
 
     goToGithubTooltips.forEach(tooltip => {
         tooltip.innerText = selectedTranslations.goToGithub;
@@ -801,6 +780,7 @@ const setLanguage = (language) => {
     contactP.innerText = selectedTranslations.contactP;
     contactPhone.innerText = selectedTranslations.contactPhone;
     contactAdress.innerText = selectedTranslations.contactAdress;
+    contactAdress2.innerText = selectedTranslations.contactAdress2;
     inputButton.innerText = selectedTranslations.inputButton;
 
     const contactMe = document.getElementById("contactMe");
@@ -816,8 +796,34 @@ const setLanguage = (language) => {
     document.querySelector(".input4Placeholder").placeholder = selectedTranslations.input4Placeholder;
     document.querySelector(".input5Placeholder").placeholder = selectedTranslations.input5Placeholder;
 
+    homeCV.href = language === "hu" ? "assets/Németh_Gábor_Webfejlesztő_CV.pdf" : "assets/Gabor_Nemeth_Web_developer_CV.pdf";
 };
 
+const setAnimatedText = (selectedTranslations) => {
+    const spanElements = homeH2.querySelectorAll('span');
+    let animationDelay = 0;  // Kezdeti animáció késleltetés
+
+    selectedTranslations.spans.forEach((spanData, idx) => {
+        if (spanElements[idx]) {
+            const spanElement = spanElements[idx];
+
+            // Kezdjük el az animációt, miután az előző befejeződött
+            setTimeout(() => {
+                spanElement.setAttribute('data-text', spanData.text);
+                spanElement.innerText = spanData.text;
+                spanElement.style.setProperty('--i', spanData.styleIndex);
+
+                // Elindítjuk az animációt a következő szöveggel
+                spanElement.classList.remove('animated');
+                spanElement.offsetHeight;  // Triggerelni a reflow-t, hogy az animáció újrainduljon
+                spanElement.classList.add('animated');
+            }, animationDelay);
+
+            // Módosítsuk a késleltetést, hogy a következő animációk is megfelelően szinkronizálódjanak
+            animationDelay += 500;
+        }
+    });
+};
 
 function Sendmail(event) {
     event.preventDefault();

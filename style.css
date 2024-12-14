@@ -24,6 +24,26 @@ html {
 
 body {
     color: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* A teljes képernyőt használja */
+    padding-bottom: env(safe-area-inset-bottom);
+    /* Safe area alján, ha van notch vagy home indicator */
+}
+
+html,
+body {
+    height: 100%;
+    /* Biztosítja, hogy a teljes magasságra kiterjedjen */
+    width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    /* Ne legyen vízszintes görgetés */
+    overflow-y: auto;
+    /* Engedélyezze a függőleges görgetést */
+    scroll-behavior: smooth;
+    /* Simább görgetés */
 }
 
 header {
@@ -57,12 +77,16 @@ header.active {
     color: var(--white-color);
     position: relative;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
 }
 
 .logo img {
     width: 9rem;
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0.5;
@@ -82,7 +106,7 @@ nav a.active {
     color: var(--main-color);
 }
 
-.lang-select {
+#languageSelect {
     padding: 1rem;
     margin-left: 3.5rem;
     border-radius: 10%;
@@ -176,6 +200,10 @@ section.active {
     margin-top: -1rem;
 }
 
+.h2-break {
+    display: none;
+}
+
 .home-detail h2 span {
     position: relative;
     display: inline-block;
@@ -183,6 +211,12 @@ section.active {
     -webkit-text-stroke: .07rem var(--main-color);
     animation: display-text 16s linear infinite;
     animation-delay: calc(-4s * var(--i));
+}
+
+
+#homeH2{
+    color: var(--main-color);
+    font-weight: bold;
 }
 
 @keyframes display-text {
@@ -742,12 +776,13 @@ section.active {
     margin-right: 1.5rem;
 }
 
-.contact-detail i:hover{
+.contact-detail i:hover {
     font-size: 3.2rem;
     transition: .3;
 }
 
-.contact-detail .detail .detail-email, .detail-phone{
+.contact-detail .detail .detail-email,
+.detail-phone {
     text-decoration: none;
     color: var(--white-color);
 }
@@ -801,12 +836,12 @@ section.active {
 
 /*Breakpoints*/
 
-@media screen and (max-width: 1320px){
+@media screen and (max-width: 1320px) {
     #menu-icon {
         display: block;
     }
 
-    .lang-select{
+    #languageSelect {
         margin: 0;
     }
 
@@ -856,7 +891,7 @@ section.active {
 }
 
 @media screen and (max-width: 768px) {
-    
+
 
     .home {
         flex-direction: column-reverse;
@@ -886,10 +921,11 @@ section.active {
     .contact-box .field-box {
         grid-template-columns: repeat(2, 1fr);
     }
+
 }
 
-@media screen and (max-width: 650px){
-    .logo img{
+@media screen and (max-width: 650px) {
+    .logo img {
         margin-left: 1.4rem;
     }
 }
@@ -905,13 +941,23 @@ section.active {
     }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 592px) {
+    .h2-break {
+        display: block;
+    }
+
+    .home-detail h2 span {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 470px) {
     html {
         font-size: 50%;
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 410px) {
 
     .home-detail,
     .resume-box h2,
@@ -921,13 +967,26 @@ section.active {
         text-align: center;
     }
 
+    .home-detail h1 {
+        font-size: 3.5rem;
+    }
+
+    #homeH2{
+        padding-top: 1.5rem;
+    }
+
     .home-detail .btn-sci {
         flex-direction: column-reverse;
+        padding-bottom: 1.rem;
     }
 
     .home-detail .btn-sci .sci {
         margin-left: 0;
         margin-bottom: 2rem;
+    }
+
+    .services-container .services-box:last-child {
+        padding-bottom: 3rem;
     }
 
     .contact-box form {
@@ -937,12 +996,17 @@ section.active {
     .contact-box h2 {
         font-size: 3.5rem;
     }
+
+    .home-detail p {
+        margin: 0.5rem 0 1.2rem;
+    }
 }
 
 /*Input confirm beállítások*/
 .swal2-html-container {
-    font-size: 18px !important; 
+    font-size: 18px !important;
 }
+
 .swal2-title {
     font-size: 24px !important;
 }

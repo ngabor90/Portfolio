@@ -35,7 +35,7 @@
             <a href="#" id="navResume">Magamról</a>
             <a href="#" id="navPortfolio">Portfolió</a>
             <a href="#" id="navContact">Kapcsolat</a>
-            <select class="lang-select">
+            <select id="languageSelect">
                 <option value="hu">HU</option>
                 <option value="en">EN</option>
             </select>
@@ -56,7 +56,7 @@
     <section class="home active">
         <div class="home-detail">
             <h1 id="homeH1">Németh Gábor</h1>
-            <h2 id="homeH2">Junior
+            <h2 id="homeH2">Junior <br class="h2-break">
                 <span style="--i:4;" data-text="Webfejlesztő">Webfejlesztő</span>
                 <span style="--i:3;" data-text="Front-end fejlesztő">Front-end fejlesztő</span>
                 <span style="--i:2;" data-text="Backend fejlesztő">Backend fejlesztő</span>
@@ -68,7 +68,7 @@
                 érdekében.</p>
 
             <div class="btn-sci">
-                <a href="assets/Németh_Gábor_CV_HU.pdf" download class="btn" id="homeCV">Magyar nyelvű CV letöltése</a>
+                <a href="assets/Németh_Gábor_Webfejlesztő_CV.pdf" download class="btn" id="homeCV">Magyar nyelvű CV letöltése</a>
                 <div class="sci">
                     <a href="https://github.com/ngabor90/" target="_blank"><i class='bx bxl-github'></i></a>
                     <a href="https://www.linkedin.com/in/g%C3%A1bor-n%C3%A9meth-3341932a7/" target="_blank"><i
@@ -90,11 +90,11 @@
 
     <!--Services section-->
     <section class="services">
-        <h2 id="serviceH2" class="heading">A <span>Szolgáltatások</span></h2>
+        <h2 id="serviceH2" class="heading"> <span>Szolgáltatások</span></h2>
         <div class="services-container">
             <div class="services-box">
                 <div class="icon">
-                    <i class='bx bx-code-alt'></i>
+                    <i class='bx bx-brush'></i>
                     <a href="#"><i class='bx bx-arrow-back'></i></a>
                 </div>
                 <h3 id="service1H3">Front-end fejlesztés</h3>
@@ -109,7 +109,7 @@
 
             <div class="services-box">
                 <div class="icon">
-                    <i class='bx bxs-paint-roll'></i>
+                    <i class='bx bx-code-alt'></i>
                     <a href="#"><i class='bx bx-arrow-back'></i></a>
                 </div>
                 <h3 id="service2H3">Backend fejlesztés</h3>
@@ -218,7 +218,7 @@
                         </div>
                         <div class="resume-item">
                             <p id="resumeEducationItem3P1" class="year">2004 szeptember - 2008 június</p>
-                            <h3 id="resumeEducationItem3H3">Értességi</h3>
+                            <h3 id="resumeEducationItem3H3">Érettségi</h3>
                             <p id="resumeEducationItem3P2" class="company">ELTE Gyakorló Középiskola</p>
                             <p id="resumeEducationItem3P3">Informatikai érettségi</p>
                         </div>
@@ -568,7 +568,7 @@
                     <a href="https://maps.app.goo.gl/iiHDSQ5GLRzS1Zqv6" target="_blank"><i class="bx bxs-map"></i></a>
                     <div class="detail">
                         <p id="contactAdress">Cím</p>
-                        <p>1041 Budapest, Hungary</p>
+                        <p id="contactAdress2">1041 Budapest, Magyarország</p>
                     </div>
                 </div>
             </div>
@@ -595,7 +595,7 @@
         </div>
     </section>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 
 </html>
