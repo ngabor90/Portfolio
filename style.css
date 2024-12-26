@@ -27,23 +27,17 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    /* A teljes képernyőt használja */
     padding-bottom: env(safe-area-inset-bottom);
-    /* Safe area alján, ha van notch vagy home indicator */
 }
 
 html,
 body {
     height: 100%;
-    /* Biztosítja, hogy a teljes magasságra kiterjedjen */
     width: 100%;
     margin: 0;
     overflow-x: hidden;
-    /* Ne legyen vízszintes görgetés */
     overflow-y: auto;
-    /* Engedélyezze a függőleges görgetést */
     scroll-behavior: smooth;
-    /* Simább görgetés */
 }
 
 header {

@@ -145,7 +145,7 @@ const translations = {
         homeP3: 'Nyitott vagyok újabb és újabb technológiák elsajátítására a hatékonyabb munkavégzés érdekében.',
         homeCV: 'Magyar nyelvű CV letöltése',
 
-        serviceH2: "A ",
+        serviceH2: "",
         serviceH2Span: "Szolgáltatások",
         service1H3: "Front-end fejlesztés",
         service1p1: "A front-end fejlesztés során modern, reszponzív és esztétikusan megtervezett felületeket hozok létre, amelyek nemcsak jól mutatnak, hanem kiváló felhasználói élményt is biztosítanak. Fontosnak tartom, hogy az általam fejlesztett alkalmazások minden eszközön - legyen az telefon, tablet vagy asztali számítógép - gördülékenyen és gyorsan működjenek.",
@@ -204,7 +204,7 @@ const translations = {
         resumeEducationItem2P2: "Ruander Oktatási Központ",
 
         resumeEducationItem3P1: "2004 szeptember - 2008 június",
-        resumeEducationItem3H3: "Értességi",
+        resumeEducationItem3H3: "Érettségi",
         resumeEducationItem3P2: "ELTE Gyakorló Középiskola",
         resumeEducationItem3P3: "Informatikai érettségi",
 
@@ -221,7 +221,7 @@ const translations = {
         resumeAboutItemP2: "Nem: ",
         resumeAboutItemP2Span: "Férfi",
         resumeAboutItemP3: "Kor: ",
-        resumeAboutItemP3Span: "34",
+        resumeAboutItemP3Span: "35",
         resumeAboutItemP4: "Város: ",
         resumeAboutItemP4Span: "Budapest",
         resumeAboutItemP5: "Nemzetiség: ",
@@ -378,7 +378,7 @@ const translations = {
         resumeAboutItemP2: "Gender: ",
         resumeAboutItemP2Span: "Male",
         resumeAboutItemP3: "Age: ",
-        resumeAboutItemP3Span: "34",
+        resumeAboutItemP3Span: "35",
         resumeAboutItemP4: "City: ",
         resumeAboutItemP4Span: "Budapest",
         resumeAboutItemP5: "Nationality: ",
