@@ -589,7 +589,7 @@ languageSelect.addEventListener('change', (event) => {
         menuIcon.classList.remove('bx-x');
         navbar.classList.remove('active');
     }
-    
+
 });
 
 const setLanguage = (language) => {
@@ -830,10 +830,10 @@ function Sendmail(event) {
 
     let params = {
         form_name: document.getElementById("form_name").value,
-        email_id: document.getElementById("input-email").value,
-        phone_id: document.getElementById("input-phone").value,
-        input_subject: document.getElementById("input-subject").value,
-        message: document.getElementById("input-text").value
+        "input-email": document.getElementById("input-email").value,
+        "input-phone": document.getElementById("input-phone").value,
+        "input-subject": document.getElementById("input-subject").value,
+        "input-text": document.getElementById("input-text").value
     };
 
     // Nyelv választás (pl. magyar vagy angol)
@@ -845,62 +845,55 @@ function Sendmail(event) {
     const submitButton = document.getElementById("inputButton");
     submitButton.disabled = true;
     submitButton.innerHTML = selectedTranslations.sendingEmail || "Küldés...",
-    submitButton.style.background = "transparent";
+        submitButton.style.background = "transparent";
     submitButton.style.color = "var(--main-color)";
     submitButton.style.boxShadow = "none";
 
-    // Küldés EmailJS API-n keresztül
-    emailjs.send("service_hbyeswb", "template_51pdar4", params)
-    .then(function (res) {
-        Swal.fire({
-            title: selectedTranslations.loadingTitle || "Üzenet küldése...",
-            text: selectedTranslations.loadingText || "Kérem, várjon...",
-            icon: "info",
-            showConfirmButton: false, 
-            allowOutsideClick: false,
-            didOpen: () => {
-                Swal.showLoading(); 
-            }
-        });
-     
-        setTimeout(() => {
-            Swal.fire({
-                title: selectedTranslations.successTitle || "Sikeres üzenetküldés!",
-                text: selectedTranslations.successText || "Köszönöm levelét, hamarosan felveszem a kapcsolatot Önnel!",
-                icon: "success",
-                confirmButtonText: selectedTranslations.confirmButtonText || "OK", // Nyelvi szöveg beállítása
-                width: '400px',
-                padding: '20px',
-                customClass: {
-                    popup: 'custom-popup',
-                    title: 'custom-title',
-                    text: 'custom-text',
-                    confirmButton: 'custom-confirm-btn'
-                }
-            }).then(() => {
-                location.reload(); // Az oldal újratöltése
-            });
-        }, 1500); 
+    // Most a `send-email.php` API-t hívjuk meg!
+    fetch("send-email.php", {
+        method: "POST",  // A helyes HTTP kérés típus
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(params)  // Az adatokat JSON formátumban küldjük
     })
-    .catch(function (error) {
-     
-        Swal.fire({
-            title: selectedTranslations.errorTitle || "Hiba történt!",
-            text: selectedTranslations.errorText || "Hiba történt az üzenet küldésekor.",
-            icon: "error",
-            confirmButtonText: selectedTranslations.confirmButtonText || "OK", // Nyelvi szöveg beállítása
-            width: '400px',
-            padding: '20px',
-            customClass: {
-                popup: 'custom-popup',
-                title: 'custom-title',
-                text: 'custom-text',
-                confirmButton: 'custom-confirm-btn'
+        .then(response => {
+            console.log("API válasz:", response); // A válasz logolása
+            return response.json();  // Válasz JSON-ra konvertálása
+        })
+        .then(data => {
+            console.log("API válasz JSON:", data);  // A teljes JSON válasz logolása
+            if (data.success) {
+                Swal.fire({
+                    title: selectedTranslations.successTitle || "Sikeres üzenetküldés!",
+                    text: selectedTranslations.successText || "Köszönöm levelét, hamarosan felveszem a kapcsolatot Önnel!",
+                    icon: "success",
+                    confirmButtonText: selectedTranslations.confirmButtonText || "OK"
+                }).then(() => {
+                    location.reload();
+                });
+            } else {
+                Swal.fire({
+                    title: selectedTranslations.errorTitle || "Hiba történt!",
+                    text: selectedTranslations.errorText || "Nem sikerült elküldeni az üzenetet.",
+                    icon: "error",
+                    confirmButtonText: selectedTranslations.confirmButtonText || "OK"
+                });
             }
+        })
+        .catch(error => {
+            console.error("Hálózati hiba részletei:", error); // A hiba részletes logolása
+            Swal.fire({
+                title: "Hálózati hiba!",
+                text: "Nem sikerült kapcsolatot létesíteni a szerverrel.",
+                icon: "error",
+                confirmButtonText: "OK"
+            });
         });
-    });
 
+    console.log(params);
 }
 
 // Az űrlap eseménykezelőjének hozzáadása
 document.getElementById("contact-form").addEventListener("submit", Sendmail);
+
