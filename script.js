@@ -194,7 +194,7 @@ const translations = {
 
         resumeEducationH2: "",
         resumeEducationH2Span: "Képzéseim",
-        resumeEducationP: "A Ruander Oktatási Központban kezdtem meg webfejlesztői tanulmányaimat, ahol Frontend Fejlesztést tanultam és sikeres vizsgát tettem. Ennek eredményeként államilag elismert Junior Frontend OKJ bizonyítványt szereztem. Ezt követően mélyebb ismereteket szereztem a PHP és SQL területén, és elvégeztem a Fullstack Webfejlesztő képzést. A folyamatos önképzés révén bővítem ismereteimet a legmodernebb technológiákról.",
+        resumeEducationP: "A Ruander Oktatási Központban kezdtem meg webfejlesztői tanulmányaimat, ahol Frontend Fejlesztést tanultam és sikeres vizsgát tettem. Ennek eredményeként államilag elismert Junior Frontend OKJ bizonyítványt szereztem. Ezt követően mélyebb ismereteket szereztem a PHP és SQL területén, és elvégeztem a Fullstack Webfejlesztő képzést. A folyamatos önképzés révén bővítem ismereteimet a legmodernebb technológiákról Udemy képzések segítségével.",
         resumeEducationItem1P1: "2024 február - 2024 július",
         resumeEducationItem1H3: "Webfejlesztő",
         resumeEducationItem1P2: "Ruander Oktatási Központ",
@@ -351,7 +351,7 @@ const translations = {
 
         resumeEducationH2: "My ",
         resumeEducationH2Span: "Education",
-        resumeEducationP: "I started my web development studies at Ruander Education Center, where I completed a Frontend Development course and successfully passed the final exam. As a result, I earned a state-recognized Junior Frontend Developer qualification. Later, I gained deeper knowledge in PHP and SQL and completed the Fullstack Web Developer course. Through continuous self-learning, I expand my knowledge of the latest technologies.",
+        resumeEducationP: "I started my web development studies at Ruander Education Center, where I completed a Frontend Development course and successfully passed the final exam. As a result, I earned a state-recognized Junior Frontend Developer qualification. Later, I gained deeper knowledge in PHP and SQL and completed the Fullstack Web Developer course. Through continuous self-education, I expand my knowledge of the latest technologies with the help of Udemy courses.",
         resumeEducationItem1P1: "February 2024 - July 2024",
         resumeEducationItem1H3: "Web Developer",
         resumeEducationItem1P2: "Ruander Education Center",
