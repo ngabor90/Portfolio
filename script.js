@@ -97,12 +97,12 @@ const activePortfolio = () => {
 }
 
 arrowRight.addEventListener('click', () => {
-    if (index < 7) {
+    if (index < 8) {
         index++;
         arrowLeft.classList.remove('disabled');
     }
     else {
-        index = 8;
+        index = 9;
         arrowRight.classList.add('disabled');
     }
 
@@ -242,21 +242,23 @@ const translations = {
         portfolio1: "Gitár API",
         portfolio2: "PHP Szivarpontozó oldal",
         portfolio3: "Lash By Judie - Szempilla stylist oldal",
-        portfolio4: "PHP MVC alapú szervíz oldal",
-        portfolio5: "PHP Apróhirdetések oldal",
-        portfolio6: "Angular Hangszerbolt Oldal",
-        portfolio7: "Az Outlaw zenekar honlapja",
-        portfolio8: "Rick & Morty API",
-        portfolio9: "TypeScript Szivarpontozó oldal",
+        portfolio4: "React Business Website",
+        portfolio5: "PHP MVC alapú szervíz oldal",
+        portfolio6: "PHP Apróhirdetések oldal",
+        portfolio7: "Angular Hangszerbolt Oldal",
+        portfolio8: "Az Outlaw zenekar honlapja",
+        portfolio9: "Rick & Morty API",
+        portfolio10: "TypeScript Szivarpontozó oldal",
         portfolioP1: "Ez egy fullstack weboldal ami gitárokkal foglalkozik, API hívás történik, a backend része MVC alapú PHP MySQL adatbázissal, a frontend része HTML és Javascript. Bejelentkezés után van lehetőség a gitárok módosítására, törlésére illetve új termék felvitelre.",
         portfolioP2: "Ez egy Szivar pontozó vélemény oldal, ami PHP-ban lett megírva, CSV adatbázist használ.",
         portfolioP3: "A legfrissebb Front-end-es munkám, hosszú CSS stílusokkal, Bootstrap keretrendszerrel. Büki Judit szempilla stylist oldala.",
-        portfolioP4: "Ez egy PHP-ban megírt MySQL adatbázissal ellátott fullstack weboldal! A Szervizelt termékek menüpont alatt lehet megnézni a képzeletbeli szervíz oldalán lévő szervizelt termékek adatait és állapotukat.",
-        portfolioP5: "Ez egy PHP-ban megírt MySQL adatbázissal ellátott apróhirdetések oldal, ahol meg lehet nézni a hirdetéseket regisztráció nélkül. Regisztráció és bejelentkezés után fel lehet rakni új hirdetést, illetve tudunk adatokat módosítani.",
-        portfolioP6: "Ez egy Angular projekt ami bemutat egy hangszerbolt minta oldalt Netlify App-ra feltöltve.",
-        portfolioP7: "Ez az Outlaw blues-rock zenekarom honlapja.",
-        portfolioP8: "Ez a Rick & Morty API oldalról történő XML API hívás.",
-        portfolioP9: "Ez egy szivar pontozó oldal, ahol feltöltheted szivarjaid értékeléseit, Netlify App-ra feltöltve.",
+        portfolioP4: "Egy React Vite project business oldal",
+        portfolioP5: "Ez egy PHP-ban megírt MySQL adatbázissal ellátott fullstack weboldal! A Szervizelt termékek menüpont alatt lehet megnézni a képzeletbeli szervíz oldalán lévő szervizelt termékek adatait és állapotukat.",
+        portfolioP6: "Ez egy PHP-ban megírt MySQL adatbázissal ellátott apróhirdetések oldal, ahol meg lehet nézni a hirdetéseket regisztráció nélkül. Regisztráció és bejelentkezés után fel lehet rakni új hirdetést, illetve tudunk adatokat módosítani.",
+        portfolioP7: "Ez egy Angular projekt ami bemutat egy hangszerbolt minta oldalt Netlify App-ra feltöltve.",
+        portfolioP8: "Ez az Outlaw blues-rock zenekarom honlapja.",
+        portfolioP9: "Ez a Rick & Morty API oldalról történő XML API hívás.",
+        portfolioP10: "Ez egy szivar pontozó oldal, ahol feltöltheted szivarjaid értékeléseit, Netlify App-ra feltöltve.",
         goToWebsite: "Irány a honlapra",
         goToGithub: "Irány a kódhoz",
 
@@ -399,21 +401,23 @@ const translations = {
         portfolio1: "Guitar API",
         portfolio2: "PHP Cigar Rating Website",
         portfolio3: "Lash By Judie - Eyelash Stylist Website",
-        portfolio4: "PHP MVC-Based Service Website",
-        portfolio5: "PHP Classified Ads Website",
-        portfolio6: "Angular Musical Instrument Store Website",
-        portfolio7: "The Outlaw Band's Website",
-        portfolio8: "Rick & Morty API",
-        portfolio9: "TypeScript Cigar Rating Website",
+        portfolio4: "React Business Website",
+        portfolio5: "PHP MVC-Based Service Website",
+        portfolio6: "PHP Classified Ads Website",
+        portfolio7: "Angular Musical Instrument Store Website",
+        portfolio8: "The Outlaw Band's Website",
+        portfolio9: "Rick & Morty API",
+        portfolio10: "TypeScript Cigar Rating Website",
         portfolioP1: "This is a full-stack website focused on guitars. It uses API calls, the backend is built with MVC-based PHP and MySQL database, and the frontend is built with HTML and JavaScript. After logging in, users can modify, delete, or add new guitar entries.",
         portfolioP2: "This is a cigar rating and review website built in PHP using a CSV database.",
         portfolioP3: "My latest front-end project featuring extensive CSS styling and Bootstrap framework. This is the website for Judit Büki, an eyelash stylist.",
-        portfolioP4: "This is a full-stack website built in PHP with a MySQL database! In the 'Serviced Products' section, users can view the details and status of items serviced on this imaginary service website.",
-        portfolioP5: "This is a classified ads website built in PHP with a MySQL database, where ads can be viewed without registration. After registering and logging in, users can post new ads and edit existing data.",
-        portfolioP6: "This is an Angular project showcasing a sample musical instrument store website, deployed on Netlify App.",
-        portfolioP7: "This is the website of my blues-rock band, Outlaw.",
-        portfolioP8: "This is an XML API call from the Rick & Morty API.",
-        portfolioP9: "This is a cigar rating website where you can upload your cigar reviews, deployed on Netlify App.",
+        portfolioP4: "A React Vite business website",
+        portfolioP5: "This is a full-stack website built in PHP with a MySQL database! In the 'Serviced Products' section, users can view the details and status of items serviced on this imaginary service website.",
+        portfolioP6: "This is a classified ads website built in PHP with a MySQL database, where ads can be viewed without registration. After registering and logging in, users can post new ads and edit existing data.",
+        portfolioP7: "This is an Angular project showcasing a sample musical instrument store website, deployed on Netlify App.",
+        portfolioP8: "This is the website of my blues-rock band, Outlaw.",
+        portfolioP9: "This is an XML API call from the Rick & Morty API.",
+        portfolioP10: "This is a cigar rating website where you can upload your cigar reviews, deployed on Netlify App.",
         goToWebsite: "Go to the Website",
         goToGithub: "Go to Github Code",
 
@@ -543,6 +547,7 @@ let portfolio6 = document.getElementById("portfolio6");
 let portfolio7 = document.getElementById("portfolio7");
 let portfolio8 = document.getElementById("portfolio8");
 let portfolio9 = document.getElementById("portfolio9");
+let portfolio10 = document.getElementById("portfolio10");
 
 let portfolioP1 = document.getElementById("portfolioP1");
 let portfolioP2 = document.getElementById("portfolioP2");
@@ -553,6 +558,7 @@ let portfolioP6 = document.getElementById("portfolioP6");
 let portfolioP7 = document.getElementById("portfolioP7");
 let portfolioP8 = document.getElementById("portfolioP8");
 let portfolioP9 = document.getElementById("portfolioP9");
+let portfolioP10 = document.getElementById("portfolioP10");
 
 let goToWebsiteTooltips = document.querySelectorAll(".goToWebsite");
 let goToGithubTooltips = document.querySelectorAll(".goToGithub");
@@ -757,6 +763,7 @@ const setLanguage = (language) => {
     portfolio7.innerText = selectedTranslations.portfolio7;
     portfolio8.innerText = selectedTranslations.portfolio8;
     portfolio9.innerText = selectedTranslations.portfolio9;
+    portfolio10.innerText = selectedTranslations.portfolio10;
 
     portfolioP1.innerText = selectedTranslations.portfolioP1;
     portfolioP2.innerText = selectedTranslations.portfolioP2;
@@ -767,6 +774,7 @@ const setLanguage = (language) => {
     portfolioP7.innerText = selectedTranslations.portfolioP7;
     portfolioP8.innerText = selectedTranslations.portfolioP8;
     portfolioP9.innerText = selectedTranslations.portfolioP9;
+    portfolioP10.innerText = selectedTranslations.portfolioP10;
 
     goToWebsiteTooltips.forEach(tooltip => {
         tooltip.innerText = selectedTranslations.goToWebsite;
