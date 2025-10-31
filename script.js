@@ -97,12 +97,12 @@ const activePortfolio = () => {
 }
 
 arrowRight.addEventListener('click', () => {
-    if (index < 8) {
+    if (index < 5) {  // CHANGED: 8 -> 5 (mivel most 7 projekt van, 0-6 index)
         index++;
         arrowLeft.classList.remove('disabled');
     }
     else {
-        index = 9;
+        index = 6;  // CHANGED: 9 -> 6
         arrowRight.classList.add('disabled');
     }
 
@@ -141,15 +141,15 @@ const translations = {
             { text: 'Fullstack fejlesztő', styleIndex: 1 }
         ],
         homeP1: 'Webfejlesztői munkát keresek.',
-        homeP2: 'Gyorsan és lelkesen tanulok, szeretnék elhelyezkedni a szakmában.',
-        homeP3: 'Nyitott vagyok újabb és újabb technológiák elsajátítására a hatékonyabb munkavégzés érdekében.',
+        homeP2: '3 hónap vállalati és másfél év szabadúszai tapasztalattal rendelkezem.',
+        homeP3: 'Olyan pozíciót keresek, ahol technikai tudásomat kamatoztathatom és tovább fejlődhetek.',
         homeCV: 'Magyar nyelvű CV letöltése',
 
         serviceH2: "",
         serviceH2Span: "Szolgáltatások",
         service1H3: "Front-end fejlesztés",
         service1p1: "A front-end fejlesztés során modern, reszponzív és esztétikusan megtervezett felületeket hozok létre, amelyek nemcsak jól mutatnak, hanem kiváló felhasználói élményt is biztosítanak. Fontosnak tartom, hogy az általam fejlesztett alkalmazások minden eszközön - legyen az telefon, tablet vagy asztali számítógép - gördülékenyen és gyorsan működjenek.",
-        service1p2: "Az alábbi technológiákat használom: HTML5, CSS, JavaScript, TypeScript, Angular",
+        service1p2: "Az alábbi technológiákat használom: HTML5, CSS, JavaScript, TypeScript, React",
         service2H3: "Backend fejlesztés",
         service2p1: "A hatékony webes alkalmazások szívét a stabil és megbízható szerveroldali rendszer alkotja. A back-end fejlesztés során az adatkezelési és szerveroldali logikára fókuszálok, így az alkalmazások zökkenőmentesen kommunikálnak a front-end réteggel.",
         service2p2: "A következő technológiákkal dolgozom: PHP és MySQL adatbáziskezelő",
@@ -158,7 +158,7 @@ const translations = {
         service3p2: "A két terület összefonódásának köszönhetően olyan rendszereket hozok létre, amelyek zökkenőmentesen működnek mind a felhasználói, mind az adminisztrációs oldalon. Könnyen bővíthetők és testreszabhatók az ügyféligények szerint. Biztosítják az adatok biztonságos kezelését és tárolását.",
 
         resumeH2: "Miért engem válassz?",
-        resumeP: "Több mint egy évtizedes irodai munkatapasztalattal és friss, piacképes webfejlesztői tudással rendelkezem. Szenvedéllyel és elkötelezettséggel dolgozom, mindig a minőséget és az ügyfél elégedettségét tartom szem előtt.",
+        resumeP: "Több mint egy évtizedes irodai munkatapasztalattal, másfél éves webfejlesztői gyakorlattal és friss vállalati projektekben szerzett tudással rendelkezem. Szenvedéllyel és elkötelezettséggel dolgozom, mindig a minőséget és a hatékony csapatmunkát tartom szem előtt.",
         resumeButton1: "Munkahelyeim",
         resumeButton2: "Képzések",
         resumeButton3: "Technológiák",
@@ -166,13 +166,19 @@ const translations = {
 
         resumeExperienceH2: "",
         resumeExperienceH2Span: "Munkahelyeim",
-        resumeExperienceP: "Az elmúlt 10 évben irodai környezetben dolgoztam, ahol precizitás, hatékony időgazdálkodás és analitikus gondolkodás vált alapvető készségeimmé. Ez az időszak nemcsak a munkafegyelmet és a csapatmunkát erősítette bennem, hanem felkészített a webfejlesztői munkák kihívásaira is. Most az irodai tapasztalatokat ötvözöm a technikai tudással, hogy értékes hozzájárulást nyújtsak új csapatomban.",
+        resumeExperienceP: "Az elmúlt 10 évben irodai környezetben dolgoztam, ahol precizitás, hatékony időgazdálkodás és analitikus gondolkodás vált alapvető készségeimmé. 2025-ben Fullstack Fejlesztőként dolgoztam egy 3 hónapos projekten a Bosch cégnél, ahol modern webes fejlesztésben vettem részt. A projekt lezárultával most olyan lehetőséget keresek, ahol hosszú távon csapatban dolgozhatok és kamatoztathatom tudásomat.",
+
+        resumeExperienceItem0P1: "2025. augusztus - október",
+        resumeExperienceItem0H3: "Webfejlesztő",
+        resumeExperienceItem0P2: "Robert Bosch Elektronika Kft.",
+        resumeExperienceItem0P3: "3D gyártási monitoring rendszer fejlesztése 100+ gép valósidejű vizualizációjával (React Three Fiber + Laravel + MySQL) REST API",
+
         resumeExperienceItem1P1: "2024. február - Jelenleg",
         resumeExperienceItem1H3: "Webfejlesztő",
         resumeExperienceItem1P2: "Szabadúszó",
-        resumeExperienceItem1P3: "Webfejlesztés, front-end, backend fejlesztés",
+        resumeExperienceItem1P3: "Egyedi reszponzív webalkalmazások fejlesztése.",
 
-        resumeExperienceItem2P1: "2018 augusztus - Jelenleg",
+        resumeExperienceItem2P1: "2018 augusztus - 2025 július",
         resumeExperienceItem2H3: "Iratkezelő",
         resumeExperienceItem2P2: "Közbeszerzés és Ellátási Főigazgatóság",
         resumeExperienceItem2P3: "Iratkezelés, irattárolás, adminisztráció",
@@ -182,7 +188,7 @@ const translations = {
         resumeExperienceItem3P2: "Iron Mountain Magyarország Kft.",
         resumeExperienceItem3P3: "Irattárolás, adminisztráció",
 
-        resumeExperienceItem4P1: "2011 júlis - 2014 április",
+        resumeExperienceItem4P1: "2011 július - 2014 április",
         resumeExperienceItem4H3: "Webshop adminisztrátor",
         resumeExperienceItem4P2: "Hangszerker Kft.",
         resumeExperienceItem4P3: "Webshop kezelés",
@@ -194,7 +200,7 @@ const translations = {
 
         resumeEducationH2: "",
         resumeEducationH2Span: "Képzéseim",
-        resumeEducationP: "A Ruander Oktatási Központban kezdtem meg webfejlesztői tanulmányaimat, ahol Frontend Fejlesztést tanultam és sikeres vizsgát tettem. Ennek eredményeként államilag elismert Junior Frontend OKJ bizonyítványt szereztem. Ezt követően mélyebb ismereteket szereztem a PHP és SQL területén, és elvégeztem a Fullstack Webfejlesztő képzést. A folyamatos önképzés révén bővítem ismereteimet a legmodernebb technológiákról Udemy képzések segítségével.",
+        resumeEducationP: "A Ruander Oktatási Központban kezdtem meg webfejlesztői tanulmányaimat, ahol Frontend Fejlesztést tanultam és sikeres vizsgát tettem. Ennek eredményeként államilag elismert Junior Frontend OKJ bizonyítványt szereztem. Ezt követően mélyebb ismereteket szereztem a PHP és SQL területén, és elvégeztem a Fullstack Webfejlesztő képzést. A Bosch-nál szerzett gyakorlati tapasztalattal párhuzamosan folyamatosan bővítem ismereteimet Udemy képzések és önálló projektek segítségével.",
         resumeEducationItem1P1: "2024 február - 2024 július",
         resumeEducationItem1H3: "Webfejlesztő",
         resumeEducationItem1P2: "Ruander Oktatási Központ",
@@ -239,22 +245,22 @@ const translations = {
 
         portfolioH2: "Legutóbbi ",
         portfolioH2Span: "Projektek",
-        portfolio1: "Gitár API",
+        // COMMENTED OUT: portfolio1: "Gitár API",
         portfolio2: "PHP Szivarpontozó oldal",
-        portfolio3: "Lash By Judie - Szempilla stylist oldal",
-        portfolio4: "React Business Website",
-        portfolio5: "PHP MVC alapú szervíz oldal",
-        portfolio6: "PHP Apróhirdetések oldal",
+        portfolio3: "Lash Szempilla stylist oldal",
+        portfolio4: "React-Tailwind CSS Business Website",
+        // COMMENTED OUT: portfolio5: "PHP MVC alapú szervíz oldal",
+        // COMMENTED OUT: portfolio6: "PHP Apróhirdetések oldal",
         portfolio7: "Angular Hangszerbolt Oldal",
         portfolio8: "Az Outlaw zenekar honlapja",
         portfolio9: "Rick & Morty API",
         portfolio10: "TypeScript Szivarpontozó oldal",
-        portfolioP1: "Ez egy fullstack weboldal ami gitárokkal foglalkozik, API hívás történik, a backend része MVC alapú PHP MySQL adatbázissal, a frontend része HTML és Javascript. Bejelentkezés után van lehetőség a gitárok módosítására, törlésére illetve új termék felvitelre.",
+        // COMMENTED OUT: portfolioP1: "Ez egy fullstack weboldal ami gitárokkal foglalkozik, API hívás történik, a backend része MVC alapú PHP MySQL adatbázissal, a frontend része HTML és Javascript. Bejelentkezés után van lehetőség a gitárok módosítására, törlésére illetve új termék felvitelre.",
         portfolioP2: "Ez egy Szivar pontozó vélemény oldal, ami PHP-ban lett megírva, CSV adatbázist használ.",
-        portfolioP3: "A legfrissebb Front-end-es munkám, hosszú CSS stílusokkal, Bootstrap keretrendszerrel. Büki Judit szempilla stylist oldala.",
-        portfolioP4: "Egy React Vite project business oldal",
-        portfolioP5: "Ez egy PHP-ban megírt MySQL adatbázissal ellátott fullstack weboldal! A Szervizelt termékek menüpont alatt lehet megnézni a képzeletbeli szervíz oldalán lévő szervizelt termékek adatait és állapotukat.",
-        portfolioP6: "Ez egy PHP-ban megírt MySQL adatbázissal ellátott apróhirdetések oldal, ahol meg lehet nézni a hirdetéseket regisztráció nélkül. Regisztráció és bejelentkezés után fel lehet rakni új hirdetést, illetve tudunk adatokat módosítani.",
+        portfolioP3: "Szempilla stylist oldal Bootstrap keretrendszerrel",
+        portfolioP4: "Egy React Vite project business oldal Tailwind CSS-el",
+        // COMMENTED OUT: portfolioP5: "Ez egy PHP-ban megírt MySQL adatbázissal ellátott fullstack weboldal! A Szervizelt termékek menüpont alatt lehet megnézni a képzeletbeli szervíz oldalán lévő szervizelt termékek adatait és állapotukat.",
+        // COMMENTED OUT: portfolioP6: "Ez egy PHP-ban megírt MySQL adatbázissal ellátott apróhirdetések oldal, ahol meg lehet nézni a hirdetéseket regisztráció nélkül. Regisztráció és bejelentkezés után fel lehet rakni új hirdetést, illetve tudunk adatokat módosítani.",
         portfolioP7: "Ez egy Angular projekt ami bemutat egy hangszerbolt minta oldalt Netlify App-ra feltöltve.",
         portfolioP8: "Ez az Outlaw blues-rock zenekarom honlapja.",
         portfolioP9: "Ez a Rick & Morty API oldalról történő XML API hívás.",
@@ -300,15 +306,15 @@ const translations = {
             { text: 'Fullstack Developer', styleIndex: 1 }
         ],
         homeP1: 'I am looking for a job as a web developer.',
-        homeP2: 'I learn quickly and enthusiastically, I want to get a job in the IT field.',
-        homeP3: 'I am open to learning more and more new technologies in order to work more efficiently.',
+        homeP2: 'I have one and a half years of freelance experience and 3 months of corporate experience.',
+        homeP3: 'Looking for an opportunity to leverage my technical skills and continue developing professionally.',
         homeCV: 'Download English CV',
 
         serviceH2: "My ",
         serviceH2Span: "Services",
         service1H3: "Front-end Development",
         service1p1: "In front-end development, I create modern, responsive, and aesthetically pleasing interfaces that not only look great but also provide an excellent user experience. I ensure that the applications I develop run smoothly and quickly on all devices—whether it is a phone, tablet, or desktop computer.",
-        service1p2: "The technologies I use include: HTML5, CSS, JavaScript, TypeScript, Angular.",
+        service1p2: "The technologies I use include: HTML5, CSS, JavaScript, TypeScript, React.",
         service2H3: "Backend Development",
         service2p1: "The heart of effective web applications is a stable and reliable server-side system. In back-end development, I focus on data management and server-side logic, ensuring that applications communicate seamlessly with the front-end layer.",
         service2p2: "The technologies I work with include: PHP and MySQL database management.",
@@ -317,7 +323,7 @@ const translations = {
         service3p2: "The integration of these two areas enables me to create systems that run seamlessly on both the user and administrative sides. They are easy to expand and customize according to client requirements, ensuring secure data handling and storage.",
 
         resumeH2: "Why Choose Me?",
-        resumeP: "I bring over a decade of office work experience combined with fresh, marketable web development skills. I work with passion and dedication, always prioritizing quality and client satisfaction.",
+        resumeP: "With over a decade of office work experience, one and a half years of web development practice, and recent corporate project experience, I bring dedication and a commitment to quality and effective teamwork.",
         resumeButton1: "Experience",
         resumeButton2: "Education",
         resumeButton3: "Skills",
@@ -325,13 +331,19 @@ const translations = {
 
         resumeExperienceH2: "My ",
         resumeExperienceH2Span: "Experience",
-        resumeExperienceP: "For the past 10 years, I have worked in office environments where precision, effective time management, and analytical thinking became key strengths. This period not only honed my discipline and teamwork skills but also prepared me for the challenges of web development. Now, I combine my office experience with technical expertise to contribute valuable skills to my new team.",
+        resumeExperienceP: "During my 10 years in office environments, I developed precision, efficient time management, and analytical thinking as core skills. In 2024, I worked as a Fullstack Developer on a 3-month project at Bosch, contributing to modern web development. Following the project's completion, I'm now seeking an opportunity where I can work with a team long-term and leverage my skills.",
+
+        resumeExperienceItem0P1: "2025. August - October",
+        resumeExperienceItem0H3: "Web Developer",
+        resumeExperienceItem0P2: "Robert Bosch Elektronika Kft.",
+        resumeExperienceItem0P3: "3D production monitoring system with real-time visualization of 100+ machines (React Three Fiber, Laravel, MySQL) REST API",
+
         resumeExperienceItem1P1: "February 2024 - Present",
         resumeExperienceItem1H3: "Web Developer",
         resumeExperienceItem1P2: "Freelancer",
-        resumeExperienceItem1P3: "Web development, front-end and back-end development",
+        resumeExperienceItem1P3: "Development of custom responsive web applications",
 
-        resumeExperienceItem2P1: "August 2018 - Present",
+        resumeExperienceItem2P1: "August 2018 - July 2025",
         resumeExperienceItem2H3: "Document Manager",
         resumeExperienceItem2P2: "Közbeszerzési és Ellátási Főigazgatóság",
         resumeExperienceItem2P3: "Document management, archiving, administration",
@@ -353,7 +365,7 @@ const translations = {
 
         resumeEducationH2: "My ",
         resumeEducationH2Span: "Education",
-        resumeEducationP: "I started my web development studies at Ruander Education Center, where I completed a Frontend Development course and successfully passed the final exam. As a result, I earned a state-recognized Junior Frontend Developer qualification. Later, I gained deeper knowledge in PHP and SQL and completed the Fullstack Web Developer course. Through continuous self-education, I expand my knowledge of the latest technologies with the help of Udemy courses.",
+        resumeEducationP: "I began my web development studies at Ruander Education Center, where I learned Frontend Development and earned a state-recognized Junior Frontend certificate. I then deepened my knowledge in PHP and SQL, completing Fullstack Web Developer training. Alongside my practical experience at Bosch, I continuously expand my skills through Udemy courses and personal projects.",
         resumeEducationItem1P1: "February 2024 - July 2024",
         resumeEducationItem1H3: "Web Developer",
         resumeEducationItem1P2: "Ruander Education Center",
@@ -398,22 +410,22 @@ const translations = {
 
         portfolioH2: "Latest ",
         portfolioH2Span: "Projects",
-        portfolio1: "Guitar API",
+        // COMMENTED OUT: portfolio1: "Guitar API",
         portfolio2: "PHP Cigar Rating Website",
-        portfolio3: "Lash By Judie - Eyelash Stylist Website",
-        portfolio4: "React Business Website",
-        portfolio5: "PHP MVC-Based Service Website",
-        portfolio6: "PHP Classified Ads Website",
+        portfolio3: "Lash - Eyelash Stylist Website",
+        portfolio4: "React-Tailwind CSS Business Website",
+        // COMMENTED OUT: portfolio5: "PHP MVC-Based Service Website",
+        // COMMENTED OUT: portfolio6: "PHP Classified Ads Website",
         portfolio7: "Angular Musical Instrument Store Website",
         portfolio8: "The Outlaw Band's Website",
         portfolio9: "Rick & Morty API",
         portfolio10: "TypeScript Cigar Rating Website",
-        portfolioP1: "This is a full-stack website focused on guitars. It uses API calls, the backend is built with MVC-based PHP and MySQL database, and the frontend is built with HTML and JavaScript. After logging in, users can modify, delete, or add new guitar entries.",
+        // COMMENTED OUT: portfolioP1: "This is a full-stack website focused on guitars. It uses API calls, the backend is built with MVC-based PHP and MySQL database, and the frontend is built with HTML and JavaScript. After logging in, users can modify, delete, or add new guitar entries.",
         portfolioP2: "This is a cigar rating and review website built in PHP using a CSV database.",
-        portfolioP3: "My latest front-end project featuring extensive CSS styling and Bootstrap framework. This is the website for Judit Büki, an eyelash stylist.",
-        portfolioP4: "A React Vite business website",
-        portfolioP5: "This is a full-stack website built in PHP with a MySQL database! In the 'Serviced Products' section, users can view the details and status of items serviced on this imaginary service website.",
-        portfolioP6: "This is a classified ads website built in PHP with a MySQL database, where ads can be viewed without registration. After registering and logging in, users can post new ads and edit existing data.",
+        portfolioP3: "Eye Lash stylist website with Bootstrap framework",
+        portfolioP4: "A React Vite business website with Tailwind CSS",
+        // COMMENTED OUT: portfolioP5: "This is a full-stack website built in PHP with a MySQL database! In the 'Serviced Products' section, users can view the details and status of items serviced on this imaginary service website.",
+        // COMMENTED OUT: portfolioP6: "This is a classified ads website built in PHP with a MySQL database, where ads can be viewed without registration. After registering and logging in, users can post new ads and edit existing data.",
         portfolioP7: "This is an Angular project showcasing a sample musical instrument store website, deployed on Netlify App.",
         portfolioP8: "This is the website of my blues-rock band, Outlaw.",
         portfolioP9: "This is an XML API call from the Rick & Morty API.",
@@ -479,6 +491,11 @@ let resumeButton4 = document.getElementById('resumeButton4');
 let resumeExperienceH2 = document.getElementById('resumeExperienceH2');
 let resumeExperienceP = document.getElementById('resumeExperienceP');
 
+let resumeExperienceItem0P1 = document.getElementById('resumeExperienceItem0P1');
+let resumeExperienceItem0H3 = document.getElementById('resumeExperienceItem0H3');
+let resumeExperienceItem0P2 = document.getElementById('resumeExperienceItem0P2');
+let resumeExperienceItem0P3 = document.getElementById('resumeExperienceItem0P3');
+
 let resumeExperienceItem1P1 = document.getElementById('resumeExperienceItem1P1');
 let resumeExperienceItem1H3 = document.getElementById('resumeExperienceItem1H3');
 let resumeExperienceItem1P2 = document.getElementById('resumeExperienceItem1P2');
@@ -538,23 +555,23 @@ let resumeAboutItemP10 = document.getElementById('resumeAboutItemP10');
 
 let portfolioH2 = document.getElementById("portfolioH2");
 
-let portfolio1 = document.getElementById("portfolio1");
+// COMMENTED OUT: let portfolio1 = document.getElementById("portfolio1");
 let portfolio2 = document.getElementById("portfolio2");
 let portfolio3 = document.getElementById("portfolio3");
 let portfolio4 = document.getElementById("portfolio4");
-let portfolio5 = document.getElementById("portfolio5");
-let portfolio6 = document.getElementById("portfolio6");
+// COMMENTED OUT: let portfolio5 = document.getElementById("portfolio5");
+// COMMENTED OUT: let portfolio6 = document.getElementById("portfolio6");
 let portfolio7 = document.getElementById("portfolio7");
 let portfolio8 = document.getElementById("portfolio8");
 let portfolio9 = document.getElementById("portfolio9");
 let portfolio10 = document.getElementById("portfolio10");
 
-let portfolioP1 = document.getElementById("portfolioP1");
+// COMMENTED OUT: let portfolioP1 = document.getElementById("portfolioP1");
 let portfolioP2 = document.getElementById("portfolioP2");
 let portfolioP3 = document.getElementById("portfolioP3");
 let portfolioP4 = document.getElementById("portfolioP4");
-let portfolioP5 = document.getElementById("portfolioP5");
-let portfolioP6 = document.getElementById("portfolioP6");
+// COMMENTED OUT: let portfolioP5 = document.getElementById("portfolioP5");
+// COMMENTED OUT: let portfolioP6 = document.getElementById("portfolioP6");
 let portfolioP7 = document.getElementById("portfolioP7");
 let portfolioP8 = document.getElementById("portfolioP8");
 let portfolioP9 = document.getElementById("portfolioP9");
@@ -643,6 +660,11 @@ const setLanguage = (language) => {
     resumeButton4.innerText = selectedTranslations.resumeButton4;
 
     resumeExperienceP.innerText = selectedTranslations.resumeExperienceP;
+
+    resumeExperienceItem0P1.innerText = selectedTranslations.resumeExperienceItem0P1;
+    resumeExperienceItem0H3.innerText = selectedTranslations.resumeExperienceItem0H3;
+    resumeExperienceItem0P2.innerText = selectedTranslations.resumeExperienceItem0P2;
+    resumeExperienceItem0P3.innerText = selectedTranslations.resumeExperienceItem0P3;
 
     resumeExperienceItem1P1.innerText = selectedTranslations.resumeExperienceItem1P1;
     resumeExperienceItem1H3.innerText = selectedTranslations.resumeExperienceItem1H3;
@@ -754,23 +776,23 @@ const setLanguage = (language) => {
         spanportfolioH2.textContent = selectedTranslations.portfolioH2Span;
     }
 
-    portfolio1.innerText = selectedTranslations.portfolio1;
+    // COMMENTED OUT: portfolio1.innerText = selectedTranslations.portfolio1;
     portfolio2.innerText = selectedTranslations.portfolio2;
     portfolio3.innerText = selectedTranslations.portfolio3;
     portfolio4.innerText = selectedTranslations.portfolio4;
-    portfolio5.innerText = selectedTranslations.portfolio5;
-    portfolio6.innerText = selectedTranslations.portfolio6;
+    // COMMENTED OUT: portfolio5.innerText = selectedTranslations.portfolio5;
+    // COMMENTED OUT: portfolio6.innerText = selectedTranslations.portfolio6;
     portfolio7.innerText = selectedTranslations.portfolio7;
     portfolio8.innerText = selectedTranslations.portfolio8;
     portfolio9.innerText = selectedTranslations.portfolio9;
     portfolio10.innerText = selectedTranslations.portfolio10;
 
-    portfolioP1.innerText = selectedTranslations.portfolioP1;
+    // COMMENTED OUT: portfolioP1.innerText = selectedTranslations.portfolioP1;
     portfolioP2.innerText = selectedTranslations.portfolioP2;
     portfolioP3.innerText = selectedTranslations.portfolioP3;
     portfolioP4.innerText = selectedTranslations.portfolioP4;
-    portfolioP5.innerText = selectedTranslations.portfolioP5;
-    portfolioP6.innerText = selectedTranslations.portfolioP6;
+    // COMMENTED OUT: portfolioP5.innerText = selectedTranslations.portfolioP5;
+    // COMMENTED OUT: portfolioP6.innerText = selectedTranslations.portfolioP6;
     portfolioP7.innerText = selectedTranslations.portfolioP7;
     portfolioP8.innerText = selectedTranslations.portfolioP8;
     portfolioP9.innerText = selectedTranslations.portfolioP9;
@@ -904,4 +926,3 @@ function Sendmail(event) {
 
 // Az űrlap eseménykezelőjének hozzáadása
 document.getElementById("contact-form").addEventListener("submit", Sendmail);
-

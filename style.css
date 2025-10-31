@@ -209,7 +209,7 @@ section.active {
 }
 
 
-#homeH2{
+#homeH2 {
     color: var(--main-color);
     font-weight: bold;
 }
@@ -377,7 +377,7 @@ section.active {
 
 .services-container .services-box:hover {
     border-color: var(--main-color);
-    transform: scale(1.02rem);
+    transform: scale(1.02);
 }
 
 .services-box .icon {
@@ -966,7 +966,7 @@ section.active {
         font-size: 3.5rem;
     }
 
-    #homeH2{
+    #homeH2 {
         padding-top: 1.5rem;
     }
 
