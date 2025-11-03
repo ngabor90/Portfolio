@@ -97,12 +97,12 @@ const activePortfolio = () => {
 }
 
 arrowRight.addEventListener('click', () => {
-    if (index < 5) {  // CHANGED: 8 -> 5 (mivel most 7 projekt van, 0-6 index)
+    if (index < 6) {  //  (mivel most 8 projekt van, 0-7 index)
         index++;
         arrowLeft.classList.remove('disabled');
     }
     else {
-        index = 6;  // CHANGED: 9 -> 6
+        index = 7;  
         arrowRight.classList.add('disabled');
     }
 
@@ -255,6 +255,7 @@ const translations = {
         portfolio8: "Az Outlaw zenekar honlapja",
         portfolio9: "Rick & Morty API",
         portfolio10: "TypeScript Szivarpontozó oldal",
+        portfolio11: "A szoba 50 árnyalata",
         // COMMENTED OUT: portfolioP1: "Ez egy fullstack weboldal ami gitárokkal foglalkozik, API hívás történik, a backend része MVC alapú PHP MySQL adatbázissal, a frontend része HTML és Javascript. Bejelentkezés után van lehetőség a gitárok módosítására, törlésére illetve új termék felvitelre.",
         portfolioP2: "Ez egy Szivar pontozó vélemény oldal, ami PHP-ban lett megírva, CSV adatbázist használ.",
         portfolioP3: "Szempilla stylist oldal Bootstrap keretrendszerrel",
@@ -265,6 +266,7 @@ const translations = {
         portfolioP8: "Ez az Outlaw blues-rock zenekarom honlapja.",
         portfolioP9: "Ez a Rick & Morty API oldalról történő XML API hívás.",
         portfolioP10: "Ez egy szivar pontozó oldal, ahol feltöltheted szivarjaid értékeléseit, Netlify App-ra feltöltve.",
+        portfolioP11: "Lakásfelújítással foglalkozó oldal magyar és spanyol nyelven.",
         goToWebsite: "Irány a honlapra",
         goToGithub: "Irány a kódhoz",
 
@@ -420,6 +422,7 @@ const translations = {
         portfolio8: "The Outlaw Band's Website",
         portfolio9: "Rick & Morty API",
         portfolio10: "TypeScript Cigar Rating Website",
+        portfolio11: "50 Sombras De Habitaciones",
         // COMMENTED OUT: portfolioP1: "This is a full-stack website focused on guitars. It uses API calls, the backend is built with MVC-based PHP and MySQL database, and the frontend is built with HTML and JavaScript. After logging in, users can modify, delete, or add new guitar entries.",
         portfolioP2: "This is a cigar rating and review website built in PHP using a CSV database.",
         portfolioP3: "Eye Lash stylist website with Bootstrap framework",
@@ -430,6 +433,7 @@ const translations = {
         portfolioP8: "This is the website of my blues-rock band, Outlaw.",
         portfolioP9: "This is an XML API call from the Rick & Morty API.",
         portfolioP10: "This is a cigar rating website where you can upload your cigar reviews, deployed on Netlify App.",
+        portfolioP11: "A home renovation website in Hungarian and Spanish.",
         goToWebsite: "Go to the Website",
         goToGithub: "Go to Github Code",
 
@@ -565,6 +569,7 @@ let portfolio7 = document.getElementById("portfolio7");
 let portfolio8 = document.getElementById("portfolio8");
 let portfolio9 = document.getElementById("portfolio9");
 let portfolio10 = document.getElementById("portfolio10");
+let portfolio11 = document.getElementById("portfolio11");
 
 // COMMENTED OUT: let portfolioP1 = document.getElementById("portfolioP1");
 let portfolioP2 = document.getElementById("portfolioP2");
@@ -576,6 +581,7 @@ let portfolioP7 = document.getElementById("portfolioP7");
 let portfolioP8 = document.getElementById("portfolioP8");
 let portfolioP9 = document.getElementById("portfolioP9");
 let portfolioP10 = document.getElementById("portfolioP10");
+let portfolioP11 = document.getElementById("portfolioP11");
 
 let goToWebsiteTooltips = document.querySelectorAll(".goToWebsite");
 let goToGithubTooltips = document.querySelectorAll(".goToGithub");
@@ -786,6 +792,7 @@ const setLanguage = (language) => {
     portfolio8.innerText = selectedTranslations.portfolio8;
     portfolio9.innerText = selectedTranslations.portfolio9;
     portfolio10.innerText = selectedTranslations.portfolio10;
+    portfolio11.innerText = selectedTranslations.portfolio11;
 
     // COMMENTED OUT: portfolioP1.innerText = selectedTranslations.portfolioP1;
     portfolioP2.innerText = selectedTranslations.portfolioP2;
@@ -797,6 +804,7 @@ const setLanguage = (language) => {
     portfolioP8.innerText = selectedTranslations.portfolioP8;
     portfolioP9.innerText = selectedTranslations.portfolioP9;
     portfolioP10.innerText = selectedTranslations.portfolioP10;
+    portfolioP11.innerText = selectedTranslations.portfolioP11;
 
     goToWebsiteTooltips.forEach(tooltip => {
         tooltip.innerText = selectedTranslations.goToWebsite;
