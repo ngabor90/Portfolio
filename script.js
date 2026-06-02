@@ -249,7 +249,7 @@ const translations = {
     resumeAboutItemP2: "Nem: ",
     resumeAboutItemP2Span: "Férfi",
     resumeAboutItemP3: "Kor: ",
-    resumeAboutItemP3Span: "35",
+    resumeAboutItemP3Span: new Date().getFullYear() - 1990 + "",
     resumeAboutItemP4: "Város: ",
     resumeAboutItemP4Span: "Budapest",
     resumeAboutItemP5: "Nemzetiség: ",
@@ -437,7 +437,7 @@ const translations = {
     resumeAboutItemP2: "Gender: ",
     resumeAboutItemP2Span: "Male",
     resumeAboutItemP3: "Age: ",
-    resumeAboutItemP3Span: "35",
+    resumeAboutItemP3Span: new Date().getFullYear() - 1990 + "",
     resumeAboutItemP4: "City: ",
     resumeAboutItemP4Span: "Budapest",
     resumeAboutItemP5: "Nationality: ",
@@ -1110,7 +1110,6 @@ function Sendmail(event) {
         confirmButtonText: "OK",
       });
     });
-
 }
 
 // Az űrlap eseménykezelőjének hozzáadása
