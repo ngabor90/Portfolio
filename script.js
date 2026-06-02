@@ -1077,11 +1077,9 @@ function Sendmail(event) {
     body: JSON.stringify(params), // Az adatokat JSON formátumban küldjük
   })
     .then((response) => {
-      console.log("API válasz:", response); // A válasz logolása
       return response.json(); // Válasz JSON-ra konvertálása
     })
     .then((data) => {
-      console.log("API válasz JSON:", data); // A teljes JSON válasz logolása
       if (data.success) {
         Swal.fire({
           title: selectedTranslations.successTitle || "Sikeres üzenetküldés!",
@@ -1105,7 +1103,6 @@ function Sendmail(event) {
       }
     })
     .catch((error) => {
-      console.error("Hálózati hiba részletei:", error); // A hiba részletes logolása
       Swal.fire({
         title: "Hálózati hiba!",
         text: "Nem sikerült kapcsolatot létesíteni a szerverrel.",
@@ -1114,7 +1111,6 @@ function Sendmail(event) {
       });
     });
 
-  console.log(params);
 }
 
 // Az űrlap eseménykezelőjének hozzáadása
