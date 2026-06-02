@@ -25,7 +25,7 @@ if ($data === null) {
     exit;
 }
 
-error_log("Decoded Data: " . print_r($data, true)); // Logoljuk a dekódolt adatokat
+error_log("Decoded Data: " . print_r($data, true));
 
 // Adatok ellenőrzése
 if (!isset($data['form_name']) || !isset($data['input-email']) || !isset($data['input-text'])) {
@@ -55,23 +55,20 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
 // API válasz
 $response = curl_exec($ch);
 $err = curl_error($ch);
+$http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 
 // Ha hiba történt, jelenjen meg a hibaüzenet
 if ($err) {
-    error_log("cURL hiba: " . $err); // Hibát logolunk
+    error_log("cURL hiba: " . $err);
     echo json_encode(["success" => false, "error" => "cURL hiba: " . $err]);
     exit;
 }
-
-$http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 
 // Ellenőrizd a HTTP státuszkódot, ha nem 200, akkor hibát jelez
 if ($http_code != 200) {
     echo json_encode(["success" => false, "error" => "Hiba a szerveroldali kapcsolatban! HTTP kód: " . $http_code]);
     exit;
 }
-
-curl_close($ch);
 
 // Ha a válasz üres, akkor hibát jelez
 if (!$response) {
@@ -82,5 +79,4 @@ if (!$response) {
 // Ha sikeres a válasz
 echo json_encode(["success" => true, "response" => json_decode($response)]);
 
-// A válasz logolása
-error_log("API válasz: " . print_r($response, true)); // Logoljuk a választ
+error_log("API válasz: " . print_r($response, true));
