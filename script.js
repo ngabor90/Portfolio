@@ -100,27 +100,26 @@ const activePortfolio = () => {
   portfolioDetails[index].classList.add("active");
 };
 
+const portfolioCount = document.querySelectorAll(".portfolio-detail").length;
+
 arrowRight.addEventListener("click", () => {
-  if (index < 6) {
-    //  (mivel most 8 projekt van, 0-7 index)
+  if (index < portfolioCount - 1) {
     index++;
-    arrowLeft.classList.remove("disabled");
-  } else {
-    index = 7;
-    arrowRight.classList.add("disabled");
   }
+
+  arrowLeft.classList.toggle("disabled", index === 0);
+  arrowRight.classList.toggle("disabled", index === portfolioCount - 1);
 
   activePortfolio();
 });
 
 arrowLeft.addEventListener("click", () => {
-  if (index > 1) {
+  if (index > 0) {
     index--;
-    arrowRight.classList.remove("disabled");
-  } else {
-    index = 0;
-    arrowLeft.classList.add("disabled");
   }
+
+  arrowLeft.classList.toggle("disabled", index === 0);
+  arrowRight.classList.toggle("disabled", index === portfolioCount - 1);
 
   activePortfolio();
 });
@@ -267,24 +266,21 @@ const translations = {
 
     portfolioH2: "Legutóbbi ",
     portfolioH2Span: "Projektek",
-    // COMMENTED OUT: portfolio1: "Gitár API",
+    portfolio1: "ShopList - Bevásárlólista alkalmazás",
     portfolio2: "PHP Szivarpontozó oldal",
     portfolio3: "Lash Szempilla stylist oldal",
     portfolio4: "React-Tailwind CSS Business Website",
-    // COMMENTED OUT: portfolio5: "PHP MVC alapú szervíz oldal",
-    // COMMENTED OUT: portfolio6: "PHP Apróhirdetések oldal",
     portfolio7: "Angular Hangszerbolt Oldal",
     portfolio8: "Az Outlaw zenekar honlapja",
     portfolio9: "Rick & Morty API",
     portfolio10: "TypeScript Szivarpontozó oldal",
     portfolio11: "A szoba 50 árnyalata",
-    // COMMENTED OUT: portfolioP1: "Ez egy fullstack weboldal ami gitárokkal foglalkozik, API hívás történik, a backend része MVC alapú PHP MySQL adatbázissal, a frontend része HTML és Javascript. Bejelentkezés után van lehetőség a gitárok módosítására, törlésére illetve új termék felvitelre.",
+    portfolioP1:
+      "Ez egy Laravel + React + MySQL alapú bevásárlólista alkalmazás, regisztrációval, bejelentkezéssel, email-megerősítéssel és drag-and-drop listakezeléssel.",
     portfolioP2:
       "Ez egy Szivar pontozó vélemény oldal, ami PHP-ban lett megírva, CSV adatbázist használ.",
     portfolioP3: "Szempilla stylist oldal Bootstrap keretrendszerrel",
     portfolioP4: "Egy React Vite project business oldal Tailwind CSS-el",
-    // COMMENTED OUT: portfolioP5: "Ez egy PHP-ban megírt MySQL adatbázissal ellátott fullstack weboldal! A Szervizelt termékek menüpont alatt lehet megnézni a képzeletbeli szervíz oldalán lévő szervizelt termékek adatait és állapotukat.",
-    // COMMENTED OUT: portfolioP6: "Ez egy PHP-ban megírt MySQL adatbázissal ellátott apróhirdetések oldal, ahol meg lehet nézni a hirdetéseket regisztráció nélkül. Regisztráció és bejelentkezés után fel lehet rakni új hirdetést, illetve tudunk adatokat módosítani.",
     portfolioP7:
       "Ez egy Angular projekt ami bemutat egy hangszerbolt minta oldalt Netlify App-ra feltöltve.",
     portfolioP8: "Ez az Outlaw blues-rock zenekarom honlapja.",
@@ -455,24 +451,21 @@ const translations = {
 
     portfolioH2: "Latest ",
     portfolioH2Span: "Projects",
-    // COMMENTED OUT: portfolio1: "Guitar API",
+    portfolio1: "ShopList - Smart Shopping List App",
     portfolio2: "PHP Cigar Rating Website",
     portfolio3: "Lash - Eyelash Stylist Website",
     portfolio4: "React-Tailwind CSS Business Website",
-    // COMMENTED OUT: portfolio5: "PHP MVC-Based Service Website",
-    // COMMENTED OUT: portfolio6: "PHP Classified Ads Website",
     portfolio7: "Angular Musical Instrument Store Website",
     portfolio8: "The Outlaw Band's Website",
     portfolio9: "Rick & Morty API",
     portfolio10: "TypeScript Cigar Rating Website",
     portfolio11: "50 Sombras De Habitaciones",
-    // COMMENTED OUT: portfolioP1: "This is a full-stack website focused on guitars. It uses API calls, the backend is built with MVC-based PHP and MySQL database, and the frontend is built with HTML and JavaScript. After logging in, users can modify, delete, or add new guitar entries.",
+    portfolioP1:
+      "A Laravel + React + MySQL shopping list application with registration, login, email verification, and drag-and-drop list management.",
     portfolioP2:
       "This is a cigar rating and review website built in PHP using a CSV database.",
     portfolioP3: "Eye Lash stylist website with Bootstrap framework",
     portfolioP4: "A React Vite business website with Tailwind CSS",
-    // COMMENTED OUT: portfolioP5: "This is a full-stack website built in PHP with a MySQL database! In the 'Serviced Products' section, users can view the details and status of items serviced on this imaginary service website.",
-    // COMMENTED OUT: portfolioP6: "This is a classified ads website built in PHP with a MySQL database, where ads can be viewed without registration. After registering and logging in, users can post new ads and edit existing data.",
     portfolioP7:
       "This is an Angular project showcasing a sample musical instrument store website, deployed on Netlify App.",
     portfolioP8: "This is the website of my blues-rock band, Outlaw.",
@@ -499,12 +492,12 @@ const translations = {
     inputButton: "Send me",
 
     successTitle: "Message sent successfully!",
-    successText: "Thank you for your message, I will get back to you shortly!",
     errorTitle: "Something went wrong!",
     errorText: "There was an error sending your message.",
     loadingTitle: "Sending message...",
     loadingText: "Please wait...",
     sendingEmail: "Sending...",
+    successText: "Thank you for your message, I will get back to you shortly!",
   },
 };
 
@@ -632,7 +625,6 @@ let resumeEducationItem2H3 = document.getElementById("resumeEducationItem2H3");
 let resumeEducationItem2P2 = document.getElementById("resumeEducationItem2P2");
 
 let resumeEducationItem3P1 = document.getElementById("resumeEducationItem3P1");
-let resumeEducationItem3H2 = document.getElementById("resumeEducationItem3H2");
 let resumeEducationItem3P2 = document.getElementById("resumeEducationItem3P2");
 let resumeEducationItem3P3 = document.getElementById("resumeEducationItem3P3");
 
@@ -654,24 +646,20 @@ let resumeAboutItemP10 = document.getElementById("resumeAboutItemP10");
 
 let portfolioH2 = document.getElementById("portfolioH2");
 
-// COMMENTED OUT: let portfolio1 = document.getElementById("portfolio1");
+let portfolio1 = document.getElementById("portfolio1");
 let portfolio2 = document.getElementById("portfolio2");
 let portfolio3 = document.getElementById("portfolio3");
 let portfolio4 = document.getElementById("portfolio4");
-// COMMENTED OUT: let portfolio5 = document.getElementById("portfolio5");
-// COMMENTED OUT: let portfolio6 = document.getElementById("portfolio6");
 let portfolio7 = document.getElementById("portfolio7");
 let portfolio8 = document.getElementById("portfolio8");
 let portfolio9 = document.getElementById("portfolio9");
 let portfolio10 = document.getElementById("portfolio10");
 let portfolio11 = document.getElementById("portfolio11");
 
-// COMMENTED OUT: let portfolioP1 = document.getElementById("portfolioP1");
+let portfolioP1 = document.getElementById("portfolioP1");
 let portfolioP2 = document.getElementById("portfolioP2");
 let portfolioP3 = document.getElementById("portfolioP3");
 let portfolioP4 = document.getElementById("portfolioP4");
-// COMMENTED OUT: let portfolioP5 = document.getElementById("portfolioP5");
-// COMMENTED OUT: let portfolioP6 = document.getElementById("portfolioP6");
 let portfolioP7 = document.getElementById("portfolioP7");
 let portfolioP8 = document.getElementById("portfolioP8");
 let portfolioP9 = document.getElementById("portfolioP9");
@@ -955,24 +943,20 @@ const setLanguage = (language) => {
     spanportfolioH2.textContent = selectedTranslations.portfolioH2Span;
   }
 
-  // COMMENTED OUT: portfolio1.innerText = selectedTranslations.portfolio1;
+  portfolio1.innerText = selectedTranslations.portfolio1;
   portfolio2.innerText = selectedTranslations.portfolio2;
   portfolio3.innerText = selectedTranslations.portfolio3;
   portfolio4.innerText = selectedTranslations.portfolio4;
-  // COMMENTED OUT: portfolio5.innerText = selectedTranslations.portfolio5;
-  // COMMENTED OUT: portfolio6.innerText = selectedTranslations.portfolio6;
   portfolio7.innerText = selectedTranslations.portfolio7;
   portfolio8.innerText = selectedTranslations.portfolio8;
   portfolio9.innerText = selectedTranslations.portfolio9;
   portfolio10.innerText = selectedTranslations.portfolio10;
   portfolio11.innerText = selectedTranslations.portfolio11;
 
-  // COMMENTED OUT: portfolioP1.innerText = selectedTranslations.portfolioP1;
+  portfolioP1.innerText = selectedTranslations.portfolioP1;
   portfolioP2.innerText = selectedTranslations.portfolioP2;
   portfolioP3.innerText = selectedTranslations.portfolioP3;
   portfolioP4.innerText = selectedTranslations.portfolioP4;
-  // COMMENTED OUT: portfolioP5.innerText = selectedTranslations.portfolioP5;
-  // COMMENTED OUT: portfolioP6.innerText = selectedTranslations.portfolioP6;
   portfolioP7.innerText = selectedTranslations.portfolioP7;
   portfolioP8.innerText = selectedTranslations.portfolioP8;
   portfolioP9.innerText = selectedTranslations.portfolioP9;
